@@ -18,1245 +18,649 @@
 <link href='https://dscto.blogspot.com/favicon.ico' rel='icon' sizes='192x192'/>
 <link href='https://dscto.blogspot.com/favicon.ico' rel='apple-touch-icon'/>
 <title>DSCTO - HERRAMIENTAS ONLINE</title>
-<style>
-    *{
-     margin:0;
-     padding:0;
-     font-size:0.72vw;
-     box-sizing:border-box;
-     font-family:"Poppins",Segoe UI;
-    }
-    ::-webkit-scrollbar{
-     display:none;
-    }
-    :root {
-      --font-size-base: 0.72vw;
-    } 
-    :root[data-theme="Dulce"] {
-      --theme-primary: #ff5c69;
-      --theme-light: #ffe5e8;
-      --theme-input: hsl(355 100% 95%);
-      --theme-border: #ff7a85;
-      --theme-button: #ffd1d5;
-      --theme-shadow-primary: hsl(355 100% 80%);
-      --theme-shadow-secondary: hsl(355deg 100% 92.94%);
-      --theme-hover-shadow: hsl(354.92deg 100% 88.43%);
-      --theme-text: #00415e;
-      --theme-title-shadow: #ffbdc1;
-      --theme-background: #fef1f1;
-      --mshadow1: #ffd4d9;
-      --mshadow2: #ffc2c7;
-    }
-    :root[data-theme="Paz"] {
-      --theme-primary: #29c72e;
-      --theme-light: #c2ffc4;
-      --theme-input: hsl(122 100% 90%);
-      --theme-border: #29c72e;
-      --theme-button: #b3ffb5;
-      --theme-shadow-primary: hsl(122 66% 60%);
-      --theme-shadow-secondary: hsl(118 55% 84%);
-      --theme-hover-shadow: hsl(120deg 72.82% 79.8%);
-      --theme-text: #00415e;
-      --theme-title-shadow: #99ff9c;
-      --theme-background: #e0ffe0;
-      --mshadow1: #aaf3ab;
-      --mshadow2: #aff4b1;
-    }
-    :root[data-theme="Naranja"] {
-      --theme-primary: orange;
-      --theme-light: #feeccb;
-      --theme-input: hsl(39 96% 92%);
-      --theme-border: #ffbf47;
-      --theme-button: #ffe2ad;
-      --theme-shadow-primary: hsl(39 100% 72%);
-      --theme-shadow-secondary: hsl(39 100% 96%);
-      --theme-hover-shadow: hsl(39.41deg 98.08% 79.61%);
-      --theme-text: #00415e;
-      --theme-title-shadow: hsl(39.84deg 100% 76.08%);
-      --theme-background: hsl(46 100% 93%);
-      --mshadow1: #ffda94;
-      --mshadow2: #feda97;
-    }
-    :root[data-theme="Sky"] {
-      --theme-primary: #007eb1;
-      --theme-light: #dee6ef;
-      --theme-input: hsl(197.14deg 94.23% 79.61%);
-      --theme-border: #007eb1;
-      --theme-button: skyblue;
-      --theme-shadow-primary: hsl(197 99% 85%);
-      --theme-shadow-secondary: hsl(197 99% 86%);
-      --theme-hover-shadow: hsl(197 100% 43%);
-      --theme-text: #00415e;
-      --theme-title-shadow: hsl(197 100% 71%);
-      --theme-background: hsl(206.67deg 36% 95.1%);
-      --mshadow1: #0abaff;
-      --mshadow2: #b8eafd;
-    }
-    :root[data-theme="Mora"] {
-      --theme-primary: #5c00d2;
-      --theme-light: hsl(266 100% 90%);
-      --theme-input: hsl(266 100% 88%);
-      --theme-border: #5c00d2;
-      --theme-button: #d4b3ff;
-      --theme-shadow-primary: hsl(266 100% 82%);
-      --theme-shadow-secondary: hsl(266 100% 79%);
-      --theme-hover-shadow: hsl(266 100% 58%);
-      --theme-text: #00415e;
-      --theme-title-shadow: hsl(266 100% 72%);
-      --theme-background: hsl(266 100% 95%);
-      --mshadow1: #bf8fff;
-      --mshadow2: #c9abf0;
-    }
-    :root[data-theme="Noche"] {
-      --theme-primary: #2e384c;
-      --theme-light: hsl(220.5deg 25.97% 30.2%);
-      --theme-input: hsl(220.5deg 25.97% 30.2%);
-      --theme-border: #2e384c;
-      --theme-button: #394661;
-      --theme-shadow-primary: hsl(223 25% 41%);
-      --theme-shadow-secondary: hsl(220 25% 48%);
-      --theme-hover-shadow: hsl(223 26% 51%);
-      --theme-text: #ffffff;
-      --theme-title-shadow: hsl(223 25% 56%);
-      --theme-background: hsl(222.67deg 25.14% 35.1%);
-      --mshadow1: #42506f;
-      --mshadow2: #526187;
-    }
-    body{
-     background: var(--theme-light);
-    }
-    .wb, .mnb{
-     background:var(--theme-background);
-    }
-    
-    .thms{top:35vh;position:fixed;left:0}.thms .thm{width:2vw;height:2.3vw;margin-left:-.5vw;cursor:pointer}.thms .mtha{width:2.5vw;transition:.4s ease-in-out;border-radius:.2vw}
-    .thms .th1{background:#FF2D54}
-    .thms .th2{background:#00D252}
-    .thms .th3{background:#FF7A00}
-    .thms .th4{background:#0077CC}
-    .thms .th5{background:#7000FF}
-    .thms .th6{background:#1A237E}
-    
-    body{
-     padding:0.98vh 1vw 0.1vh 1vw;
-    }
-    .rstx,.mhj,.ctd{
-     font-size:0.7vw;
-    }
-    .miwb{
-     margin:auto;
-     display:grid;
-     gap:0.78% 0.8%;
-     max-width:88vw;
-     min-height:98vh;
-     grid-template:0.26fr 0.78fr 0.9fr/ 1.8fr 1fr;
-    }
-    .wbz{
-     grid-area:1/1/4/2;
-    }
-    .wbz h2,h1{
-     font-weight:800;
-    }
-    .txc,h2,h1,.hsd,input,th,td{
-     text-align:center;
-    }
-    h1{
-     font-size:1.18vw;
-    }
-    .wbz h2{
-     font-size:1vw;
-    }
-    .ptl{
-     padding:1.3vh 0.3vw 0 0.4vw;
-    }
-    .hsd,.ftx{
-     font-size:0.55vw;
-     letter-spacing:0.02vw;
-    }
-    .dpn,.mrp,.nps,.sld,.updb,.mpd{
-     display:none;
-    }
-    .dpb,.npa,.sla,.upda,.mpda{
-     display:block;
-    }
-    .fmt{
-     width:6.8vw;
-     font-weight:700;
-     justify-content:end;
-     display:inline-flex;
-    }
-    .fmg{
-     padding:1.1vh 0.4vw 1.1vh 1.2vw;
-    }
-    input,textarea,button{
-     border:none;
-     outline:none;
-     font-family:'Rubik',segoe ui
-    }
-    .wbz input{
-     width:5vw;
-     border-radius:0.16vw;
-     padding:0.9vh 0.5vw;
-    }
-    .npl,.bok{
-     border-radius:0.38px;
-     border-radius:0.18vw;
-     cursor:pointer;
-     letter-spacing:0.18px;
-    }
-    .fm3 input{
-     font-weight:700;
-    }
-    .npl{
-     padding:1.18vh 0.8vw;
-     font-family:'Rubik',segoe ui
-    }
-    .npl,.mrptx{
-     font-weight:600;
-    }
-    .mds{
-     padding:1.18vh 1.3vw;
-    }
-    footer{
-     bottom:0;
-     position:absolute;
-    }
-    .dpf{
-     display:flex;
-     justify-content:space-between;
-     align-items:center;
-    }
-    .dpc{
-     display:flex;
-     justify-content:center;
-     align-items:center;
-    }
-    .tnp{
-     padding:0.35vh 0.4vw;
-    }
-    .ctd input{
-     border-radius:0.18vw;
-    }
-    #fecha0{
-     text-align:left;
-    }
-    .tfecha{
-     display:block;
-     padding-top:0.6vh;
-    }
-    #fechayes{
-     border-radius:0.18vw;
-     font-weight:600;
-    }
-    .wbx,.nplm,.awis .lrst,.tfecha,.wbz,.mict{
-     position:relative;
-    }
-    .nps,.mnp,.mhj{
-     width:100%;
-     height:100%;
-    }
-    .mbx{
-     height:92.8%;
-    }
-    .mnb{
-     position:absolute;
-     bottom:0;
-    }
-    .nbx,.nby{
-     display:flex;
-    }
-    .bts{
-     cursor:pointer;
-     font-weight:600;
-    }
-    .mhj{
-     letter-spacing:0.03vw;
-     line-height:2.5vh;
-     padding:1vh 0.3vw 1vh 0.6vw;
-    }
-    .wb{
-     border-radius:0.18vw;
-    }
-    .wb:hover{
-     transform:translateY(-1.2px);
-     transition:0.3s ease-in-out;
-     cursor:pointer;
-    }
-    .awis .lrst:after,.mnb,.mrp,.nbts,.chf #mtiempo:after{
-     position:absolute;
-    }
-    .mrp{
-     right:0;
-     z-index:1;
-    }
-    .msp{
-     display:flex;
-     padding:1vh 1.7vw;
-     flex-direction:column;
-     font-weight:600;
-    }
-    .npl:hover,.msp:hover,.npla,.twn:hover,.bok:hover{
-     font-weight:800;
-     padding:1.3vh 1.18vw;
-     transition:0.3s ease-in-out;
-    }
-    .lrst:after,.chf #mtiempo:after{
-     content:"";
-     width:0.8vw;
-     height:0.8vw;
-    }
-    .lrst:after{
-     top:-0.7vh;
-     right:0.5vw;
-    }
-    .chf #mtiempo:after{
-     top:0.13vh;
-    }
-    .awis b{
-     color:green;
-    }
-    .awis #dsc,.awis #pln,.msp{
-     font-weight:600;
-    }
-    .awis #rst{
-     font-weight:800;
-    }
-    footer,.mnb{
-     width:100%;
-    }
-    .foh{
-     width:0.48vw;
-    }
-    .ctd{
-     padding:1vh 0.4vw;
-    }
-    .ctd input{
-     padding:0.6vh 0.4vw;
-    }
-    #fecha0{
-     width:7.5vw;
-    }
-    #fechahoy{
-     width:6vw;
-    }
-    #fechayes{
-     padding:0.88vh 0.5vw;
-     cursor:pointer;
-    }
-    .bts{
-     padding:0.7vh 0.58vw;
-     font-size:0.64vw;
-    }
-    .sts{
-     top:25%;
-     text-align:center;
-     position:absolute;
-     left:0;
-    }
-    .mst{
-     width:1.65vw;
-     height:5.5vh;
-     cursor:pointer;
-    }
-    .mst:hover,.sta{
-     padding-right:2.2vw;
-     transition:padding-right 0.5s ease-in-out;
-     border-radius:0 0.18vw 0.18vw 0;
-    }
-    .fmg input:focus,.ctd input:focus{
-     border-width:0.1042vw;
-     font-weight:700;
-    }
-    #scimg{
-     max-height:36vh;
-     max-width:30vw;
-    }
-    label.tnp{
-     display:block;
-     font-weight:800;
-    }
-    .dlb{
-     width:1.3vw;
-     height:2vh;
-     border-radius:5px;
-     font-size:0.5vw;
-     font-weight:800;
-     position:absolute;
-     top:0.6vh;
-     right:-0.3vw;
-    }
-    
-    table{
-     border-collapse:collapse;
-     width:52vw;
-     height:35vh;
-     overflow:hidden;
-    }
-    .slider{
-     position:relative;
-     width:36vw;
-     max-width:100%;
-     overflow:hidden;
-     border:0.03vw solid #ddd;
-    }
-    .slides{
-     display:flex;
-     transition:transform 0.5s ease-in-out;
-    }
-    .slide{
-     min-width:100%;
-    }
-    .mbts{
-     top:50%;
-     width:100%;
-     display:flex;
-     position:absolute;
-     justify-content:space-between;
-     transform:translateY(-50%);
-     cursor:pointer;
-    }
-    .sbt{
-     cursor:pointer;
-     padding:1.8vh 0.5vw;
-     background-color:rgb(255 255 255 / 0.8);
-    }
-    .calculator,.hst{
-     box-shadow:3px 3px 4px #4c4c4c26,-3px -2px 3px 0 #f1f5ff;
-     border:0.04vh solid #ccc;
-     padding:0.2vh 0.4vw 0.9vh 0.4vw;
-    }
-    .buttons{
-     display:grid;
-     grid-template-columns:repeat(4,1fr);
-     gap:0.2vh;
-     background:#eaf8f0;
-    }
-    .buttons button{
-     padding:1.5vh 1.2vw;
-     border:0.02vh solid #ccc;
-     border-radius:0.2vw;
-     cursor:pointer;
-    }
-    .buttons button:active{
-     background:hsl(145 50% 83%);
-    }
-    .display{
-     background:#eaf8f0;
-     padding:1vh;
-     text-align:right;
-     border:0.04vh solid #c6ecd6;
-     margin:0.55vh 0;
-     border-radius:0.2vw;
-    }
-    .operation{
-     display:block;
-     font-size:0.8vw;
-    }
-    .result{
-     font-size:1.2vw;
-    }
-    .mwb{
-     align-items:start;
-    }
-    .hst{
-     width:14vw;
-     margin-left:0.5vw;
-    }
-    .hsr li{
-     list-style:none;
-     background:#f0f0f0;
-     padding:0.5vh 1.2vw;
-     border:0.02vh solid #ccc;
-     border-radius:0.2vw;
-     cursor:pointer;
-     font-size:0.7vw;
-    }
-    .wby img{
-     max-width:100%;
-    }
-    .msld{
-     max-width:24vw;
-     width:100%;
-     position:relative;
-     text-align:center;
-    }
-    .msld .slb{
-     position:absolute;
-     font-size:0.99vw;
-     padding:4vh 0.8vw;
-    }
-    .slb.prev{
-     top:-3vh;
-     left:-2.3vw;
-    }
-    .slb.next{
-     top:-3vh;
-     right:-0.2vw;
-    }
-    .bqt{
-     font-size:0.9vw;
-     width:22vw;
-     padding-bottom:1vh;
-    }
-    .updb{
-     width:1.71vw;
-     cursor:pointer;
-     position:absolute;
-     top:0.9vh;
-     right:0.5vw;
-    }
-    .updb:hover{
-     transform:scale(1.1);
-     transition:0.3s ease-in-out;
-    }
-    .upd0{
-     fill:orange;
-    }
-    .beny{
-     font-weight:600;
-    }
-    .benx{
-     font-weight:700;
-    }
-    .bgw{
-     background:#fff
-    }
-    .mpd{
-     border:none;
-     outline:none
-    }
-    #ith0:focus{
-     outline:none
-    }
-    .txe{
-     white-space:pre-wrap;
-     font-size:.8vw;
-     line-height:1.4vw;
-    }
-    .mpd div,.mpd textarea,.mpd img{
-     width:100%;
-     height:35vh;
-    }
-    .pdim{
-     width:20vw;
-     height:150px;
-     border:2px dashed #ccc;
-     cursor:pointer;
-     background:#fff;
-     display:flex;
-     align-items:center;
-     justify-content:center;
-     position:relative
-    }
-    .pdim:hover{
-     border-color:#4CAF50
-    }
-    .pdim.dragover{
-     border-color:#2196F3;
-     background:#e3f2fd
-    }
-    .pdim img{
-     max-width:100%;
-     max-height:100%;
-     object-fit:contain
-    }
-    .pdim:empty::before{
-     content:"Click para pegar o arrastra una imagen aquí";
-     color:#666;
-     font-size:14px;
-     text-align:center;
-     padding:20px
-    }
-    input:hover,button:hover,.bene:hover,.bqt:hover,.bhj:hover{
-     transform:scale(1.02);
-     transition:.3s ease-in-out;
-    }
-    .prtc{
-     position:absolute;
-     top:50.7vh;
-     background:#fafafa;
-     width:50vw;
-     left:3vw;
-     padding:2vw;
-     line-height:2vw;
-     text-align:justify;
-     box-shadow:0 0.052vw 0.104vw 0 #C0C0C0,0 0.052vw 0.156vw 0.052vw #E0E0E0;
-    }
-    .plmea{
-     display:inline-block;
-     margin-left:12.4vw;
-     margin-top:-2.8vh
-    }
-    .plmea .npl{
-     margin-top:-1.2vh;
-     margin-bottom:2.3vh;
-     display:inline-flex
-    }
-    .hr1 .fm2{
-     margin-top:-2.9vh
-    }
-    [data-swb]{
-     width:100%;
-     height:100%;
-    }
-    .dpg,.hr3.mhr,.bene{
-     display:grid
-    }
-    .hr3.mhr{
-     grid-template-columns:repeat(4,1fr);
-     width:94%;
-     gap:2vh;
-     margin:2vh auto 0 auto;
-     text-align:center;
-    }
-    .bene{
-     height:10.8vh;
-     align-items:center;
-     padding:2.8vh .8vw;
-    }
-    .ben0{
-     grid-column:2/4;
-    }
-    .ben6,.ben0,.ben5{
-     grid-row:2;
-    }
-    .ben7,.ben8,.ben9,.ben10{
-     grid-row:3;
-    }
-    .sun{
-     background:yellow
-    }
-    .ztx{
-     transform:scale(1.2);
-     transition:.3s ease-in-out
-    }
-    
-    .fm3 input,.awis #pln,.awis #dsc,#fechahoy{
-     background:var(--theme-input);
-    }
-    h1{
-     text-shadow:0.15vh 0.16vw 0.12vw var(--theme-title-shadow);
-    }
-    .wb:hover{
-     box-shadow:0 5px 10px #fdf0f0;
-    }
-    .npl,.bts,.msp,.bene{
-     background:var(--theme-button);
-    }
-    th,.tnp,.bok,.npla,.bha,.npl:hover,.bts:hover,.msp:hover,.dlb,.gbb,.hr3 svg,.bene:hover{
-     background:var(--theme-primary);
-     color:#fff;
-    }
-    .wb{
-     box-shadow:0 0.18vh 0.7vw 0 var(--theme-shadow-primary),0 0.3vh 0.9vw 0 var(--theme-shadow-secondary);
-    }
-    .npl,.bok,.bene{
-     box-shadow:0.01vh 0.14vw 0.18vw var(--theme-shadow-primary),0 -0.09vh 0.02vw var(--mshadow1);
-    }
-    .npl:hover,.msp:hover,.npla,.twn:hover,.bok:hover{
-     box-shadow:0.01vh 0.14vw 0.18vw var(--theme-hover-shadow),0 -0.09vh 0.02vw var(--mshadow2);
-    }
-    .wb,input,th,td{
-     border:0.09vw solid var(--theme-border);
-    }
-    .wbz h2,h,.msp{
-     color:var(--theme-text);
-    }
-    td{
-     background:#fff;
-    }
-    .foh,.updb{
-     fill:var(--theme-primary);
-    }
-    @media(max-width:770px){
-     *{
-     font-size:1vw
-    }
-    .miwb{
-     max-width:100vw
-    }
-    .npl,.mrptx{
-     font-weight:400
-    }
-    .fmt,.beny,.fm3 input{
-     font-weight:500
-    }
-    .npl:hover,.msp:hover,.npla,.twn:hover,.bok:hover,b{
-     font-weight:600
-    }
-    body{
-     padding:0.38vh .5vw 0.1vh .5vw
-    }
-    }
-    @media(max-width:570px){
-     *{
-     font-size:1.8vw
-    }
-    .mnb{
-     bottom:-1vw;
-    }
-    .bts{
-     padding:0.9vw 1.6vw;
-    }
-    .msld{
-     max-width:57vw;
-    }
-    .bqt{
-     font-size:2.6vw;
-     width:55vw;
-    }
-    #fechahoy{
-     width:26vw;
-    }
-    #fecha0{
-     width:18vw;
-    }
-    .bts{
-     font-size:1.5vw;
-    }
-    .wby,.wbx{
-     min-height:50vw;
-    }
-    .hsd,.ftx{
-     font-size:1.3vw;
-    }
-    .miwb{
-     min-height:auto;
-    }
-    .mhr.hr3{
-     margin:.5vw auto 9vw auto;
-    }
-    .bene{
-     height:6vw;
-     padding:0;
-    }
-    .updb{
-     width:3vw;
-    }
-    .wbz h2{
-     font-size:2vw;
-    }
-    .rstx,.mhj,.ctd,.rstx b{
-     font-size:1.5vw;
-    }
-    .txe{
-     font-size:1.99vw;
-     line-height:2vh;
-    }
-    .wbz input{
-     width:12vw;
-    }
-    .fmt{
-     width:12vw;
-    }
-    .plmea{
-     margin-left:25vw;
-    }
-    h1{
-     font-size:2.3vw
-    }
-    .hsd{
-     font-size:1.1vw;
-    }
-    .miwb{
-     display:grid;
-     grid-template-columns:1fr;
-    }
-    .wb{
-     border-radius:.4vw
-    }
-    .wbc,.wbx{
-     order:1
-    }
-    .wbc{
-     order:2;
-     height:22vw;
-    }
-    }
-    @media(max-width:470px){
-     *{
-     font-size:2.18vw;
-     text-align:center;
-    }
-    .updb{
-     width:5vw;
-     right:2vw;
-    }
-    .bene{
-     font-size:1.4vw;
-    }
-    .mhr.hr3{
-     margin:.5vw auto 13vw auto;
-    }
-    .fmg{
-     padding:.8vh 0.2vw .8vh 1.2vw;
-    }
-    .fm2 label{
-     margin-bottom:4vw;
-     display:block;
-    }
-    .hr1 .fm2{
-     margin-top:-3vh;
-    }
-    .npl{
-     justify-content:center;
-    }
-    .plmea{
-     display:grid;
-     width:85%;
-     margin:0 auto;
-     grid-template-columns:repeat(4,1fr);
-     gap:1vw;
-     margin-top:2vh;
-    }
-    .wbz input{
-     width:85%;
-     margin:auto;
-     display:flex;
-    }
-    .fmt{
-     width:100%;
-     display:block;
-     text-align:center;
-    }
-    }
-    </style>
-    
-      
-      
-      
-    </head>
-    
-    <body>
-      <!--JESUS ES MI SALVADOR PAGE[DSCTO V22]-->
-    <div class='miwb'>
-    <div class='wb wbz'>
-    <div class='mhr hr1'>
-    <div class='ptl'>
-    <h1>CALCULADORA MÓVIL</h1>
-    <div class='hsd'>(Calcula mucho más rápido los descuentos)</div>
-    </div>
-    <div class='fmg fm1 fmp'>
-    <label for='pln'><span class='fmt'>PLANES: </span>
-    <input data-din='di01' id='pln' type='text' value='69.90'/></label>
-    <div class='plmea'>
-    <span class='npl mpl pmn' data-dvl='20.90'>20.90</span>
-    <span class='npl mpl pmn' data-dvl='25.90'>25.90</span>
-    <span class='npl mpl pmn' data-dvl='27.90'>27.90</span>
-    <span class='npl mpl pmn' data-dvl='29.90'>29.90</span>
-    <span class='npl mpl pmn' data-dvl='32.90'>32.90</span>
-    <span class='npl mpl pmn' data-dvl='35.90'>35.90</span>
-    <span class='npl mpl pmn' data-dvl='39.90'>39.90</span>
-    <span class='npl mpl pmn' data-dvl='42.90'>42.90</span>
-    <span class='npl mpl pmn' data-dvl='45.90'>45.90</span>
-    <span class='npl mpl pmn' data-dvl='49.90'>49.90</span>
-    <span class='npl mpl pmn' data-dvl='55.90'>55.90</span>
-    <span class='npl mpl pmn' data-dvl='59.90'>59.90</span>
-    <span class='npl mpl pmn' data-dvl='65.90'>65.90</span>
-    <span class='npl mpl pmn npla' data-dvl='69.90'>69.90</span>
-    <span class='npl mpl pmn' data-dvl='74.90'>74.90</span>
-    <span class='npl mpl pmn' data-dvl='79.90'>79.90</span>
-    <span class='npl mpl pmn' data-dvl='85.90'>85.90</span>
-    <span class='npl mpl pmn' data-dvl='89.90'>89.90</span>
-    <span class='npl mpl pmn' data-dvl='99.90'>99.90</span>
-    <span class='npl mpl pmn' data-dvl='114.90'>114.90</span>
-    </div>
-    </div>
-    <div class='fmg fm2'>
-    <label for='dsc'><span class='fmt'>DESCUENTO: </span>
-    <input data-din='di02' id='dsc' type='text' value='20'/></label>
-    <span class='npl mds auto npla'>AUTO</span>
-    <span class='npl mds vds' data-dvl='20'>20%</span>
-    <span class='npl mds vds' data-dvl='30'>30%</span>
-    <span class='npl mds vds' data-dvl='40'>40%</span>
-    <span class='npl mds vds' data-dvl='50'>50%</span>
-    </div>
-    <div class='fmg fm3'>
-    <label class='lrst' for='rst'><span class='fmt'>RESULTADO: </span>
-    <input data-din='di03' id='rst' readOnly='readOnly' type='text' value='55.92'/></label>
-    <span class='rstx txd'>Tendra un ahorro de s/ <b>13.98</b></span>
-    </div>
-    </div>
-    <div class='mhr hr2'>
-    <div class='ptl'>
-    <h2>AJUSTE CON RECONEXIÓN O PAQUETE</h2>
-    <div class='hsd'>(Cuando el cliente se queja por cobros de su Plan)</div>
-    </div>
-    <div class='fmg fm1'>
-    <label for='arc'><span class='fmt'>RECIBO: </span>
-    <input data-din='di04' id='arc' type='text' value='69.90'/></label>
-    <span class='rstx at1'>Calculando su Recibo de Plan:  69.90 - 9.99 = 59.90</span>
-    </div>
-    <div class='fmg fm2'>
-    <label for='arx'><span class='fmt'>RECONEX.: </span>
-    <input data-din='di05' id='arx' type='text' value='9.99'/></label>
-    <span class='rstx at2'>Ahora, calculando ajuste del Plan: 59.90 / 2 = 29.95 </span>
-    </div>
-    <div class='fmg fm3'>
-    <label class='lrst' for='ars'><span class='fmt'>AJUSTE PLAN: </span>
-    <input data-din='di06' id='ars' readOnly='readOnly' type='text' value='27.95'/></label>
-    <span class='rstx at3'>Recordar al cliente que pagará de <b>29.95 + 9.99 = 39.95</b> total del mes. </span>
-    </div>
-    </div>
-    <div class='mhr hr3'>
-    <div class='bene benx ben0 slb npla' data-bfl='ben0'>RETENCIONES ABD<div class='txc'>(Frases positivas)</div></div>
-    <div class='bene beny ben1' data-bfl='ben1' data-sig='bdsc' data-ssg='https://i.postimg.cc/GtcJk9Lm/DESCUENTO.png'>DESCUENTO</div>
-    <div class='bene beny ben2' data-bfl='ben2' data-sig='bbno' data-ssg='https://i.postimg.cc/8CY5SzXn/BONO.avif'>BONO</div>
-    <div class='bene beny ben3' data-bfl='ben3' data-sig='bajs' data-ssg='https://i.postimg.cc/fTyqFgsT/AJUSTE.png'>AJUSTE</div>
-    <div class='bene beny ben4' data-bfl='ben4' data-sig='bcom' data-ssg='https://i.postimg.cc/q7qRS3w3/Disney-Ofre.png'>DISNEY<div class='txc'>(Ofrecimiento)</div></div>
-    <div class='bene beny ben5' data-bfl='ben5' data-sig='bpla' data-ssg='https://i.postimg.cc/rybdkKWX/Mis-PLANES.avif'>PLANES AHORROS >20.90</div>
-    <div class='bene beny ben6' data-bfl='ben6' data-sig='bplf' data-ssg='https://i.postimg.cc/hj7GPRH4/Disney-Contrato.png'>DISNEY<div class='txc'>(Contrato)</div></div>
-    <div class='bene beny ben7' data-bfl='ben7' data-sig='bpli' data-ssg='https://i.postimg.cc/L4b3q4d2/CAPL.avif'>PLANES ILIM >69.90</div>
-    <div class='bene beny ben8' data-bfl='ben8' data-sig='bprm' data-ssg='https://i.postimg.cc/5yd2XkVB/PERMANENCIA.png'>PERMANENCIA</div>
-    <div class='bene beny ben9' data-bfl='ben9' data-sig='brst' data-ssg='https://i.postimg.cc/ZYpqGZ8V/RESET.png'>RESET</div>
-    <div class='bene beny ben10' data-bfl='ben10' data-sig='boff' data-ssg='https://i.postimg.cc/Y23xtNRG/Plan-Adicional.avif'>PLAN ADICIONAL</div>
-    </div>
-    <footer>
-    <div class='foo ftx txc'>Creado con <svg class='foh' title='heart' viewBox='0 0 512 512' width='100'>
-    <path d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z'></path>
-    </svg> by @wilder.taype 2023 - <span class='ftx' id='yr'></span><span class='prt ftx'> | Política de privacidad</span> | Actualizado: <span class='upt ftx'>
-    </span>
-    </div>
-    </footer>
-    <div class='upwb'>
-    <svg class='updb upd0' title='redo-alt' viewBox='0 0 512 512'><path d='M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556 4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504 119.034 504 8.001 392.967 8 256.002 7.999 119.193 119.646 7.755 256.455 8z'></path>
-    </svg>
-    <svg class='updb upd1 upda' title='check-square' viewBox='0 0 448 512'>
-    <path d='M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z'></path></svg>
-    </div>
-    <div class='prtc dpn'>
-    <b>Política de Privacidad</b>
-    <p>Calculadora Movil es una herramienta tiene como propósito facilitar el cálculo de descuentos, la gestión de tiempos y proporcionar un bloc de notas para apoyo en anotaciones. Todos los datos ingresados se almacenan localmente en el dispositivo del usuario, sin compartirse con terceros en ningún caso.</p><p>Se recomienda proteger la información almacenada y utilizar "Calculadora Movi" exclusivamente con fines educativos y en entornos profesionales dentro de la empresa. Cabe destacar que la función de autoguardado está programada para eliminar los datos almacenados automáticamente después de un periodo de 24 horas desde su ingreso, asegurando que toda la información se borre de cookies o almacenamiento local al concluir ese plazo.</p>
-    <div><button class='okpp bts'>ENTENDIDO</button></div>
-    </div>
-    </div>
-    <!--NOTEPAD[START]-->
-    <div class='wb wbc'>
-    <h3 class='tnp txc'>CALCULAR TIEMPO DE DSCTO/BONO</h3>
-    <div class='ctd txc'>
-    <label for='fecha0'>Desde:</label>
-    <input data-din='di07' id='fecha0' type='text' value='18/08/2024'/>
-    <label for='fechahoy'>Hoy:</label>
-    <input data-din='di08' id='fechahoy' readonly='readonly' type='text'/>
-    <button class='bok' id='fechayes'>CALCULAR</button>
-    <span class='tfecha'>El resultado es: <span id='mtiempo'>
-    </span></span>
-    </div>
-    </div>
-    <div class='wb wbx'>
-    <h3 class='tnp txc'>CALC DINÁMICA/NOTEPAD/IMAGEN</h3>
-    <div class='mbx'>
-    <div class='mpds mnp'>
-    <div class='mpd mpd0 mpda' data-ipd='pd0'>
-    <div class='txe pdcd mhj bgw' contenteditable='true' data-entx='mck0' id='ith0' spellcheck='false'>Agrega = al final para calcular:   
-    69 - 9.99</div>
-    </div>
-    <div class='mpd mpd1' data-ipd='pd1'>
-    <div class='txe pdim' data-entx='mck1' id='ith1'></div>
-    </div>
-    <div class='mpd mpd2' data-ipd='pd2'>
-    <textarea class='txe mhj' data-entx='mck2' id='ith2' name='nth2'></textarea>
-    </div>
-    <div class='mpd mpd3' data-ipd='pd3'>
-    <textarea class='txe mhj' data-entx='mck3' id='ith3' name='nth3'></textarea>
-    </div>
-    <div class='mpd mpd4' data-ipd='pd4'>
-    <textarea class='txe mhj' data-entx='mck4' id='ith4' name='nth4'></textarea>
-    </div>
-    </div>
-    <div class='mnb dpf'>
-    <div class='nbx'>
-    <span class='hj0 bhj bts bha' data-hjs='th0'>CALC</span>
-    <span class='hj1 bhj bts' data-hjs='th1'>IMGS</span>
-    <span class='hj2 bhj bts' data-hjs='th2'>NOTA2</span>
-    <span class='hj3 bhj bts' data-hjs='th3'>NOTA3</span>
-    <span class='hj4 bhj bts' data-hjs='th4'>NOTA4</span>
-    </div>
-    <div class='nby'>
-    <button class='nbs nb1 bts ksa' data-ack='svk'>GUARDAR</button>
-    <button class='nbs nb2 bts kdl' data-ack='dlk'>ELIMINAR</button>
-    <button class='nbs nb3 bts kco' data-ack='cpk'>COPIAR</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class='wb wby dpc'>
-    <div class='msld'>
-    <div class='slb prev'>&#10094;</div>
-    <blockquote class='sld sl1' data-bfl='sl1'>
-    <p class='bqt'>"Todo lo puedo en cristo que me fortalece"</p>
-    <cite class='bqa'>- Jaci Ayala</cite>
-    </blockquote>
-    <blockquote class='sld sl2' data-bfl='sl2'>
-    <p class='bqt'>"Lo que es para ti, te encuentra"</p>
-    <cite class='bqa'>- Yessenia Goicochea</cite>
-    </blockquote>
-    <blockquote class='sld sl3' data-bfl='sl3'>
-    <p class='bqt'>"Levantate cada mañana con ilusion de ser el mejor"</p>
-    <cite class='bqa'>- Helene Rivera</cite>
-    </blockquote>
-    <blockquote class='sld sl4' data-bfl='sl4'>
-    <p class='bqt'>"Piensa en positivo y cree en Dios, todo estará bien... &#161;Ánimo, Dios te da más FUERZA!"</p>
-    <cite class='bqa'>- Wilder Taype</cite>
-    </blockquote>
-    <blockquote class='sld sl5' data-bfl='sl5'>
-    <p class='bqt'>"El corazón no muere cuando deja de latir. El corazón muere cuando los latidos dejan de tener sentido"</p>
-    <cite class='bqa'>- Nayeli Ccari</cite>
-    </blockquote>
-    <blockquote class='sld sl6' data-bfl='sl6'>
-    <p class='bqt'>"Trabajar duro es importante, pero hay algo que importa más, creer en ti mismo"</p>
-    <cite class='bqa'>- Nayeli Polo</cite>
-    </blockquote>
-    <blockquote class='sld sl7' data-bfl='sl7'>
-    <p class='bqt'>"Olvida el pasado, disfruta el presente y planifica tu futuro"</p>
-    <cite class='bqa'>- Walter Julian</cite>
-    </blockquote>
-    <blockquote class='sld sl8' data-bfl='sl8'>
-    <p class='bqt'>"Solo me tengo a mí, no me puedo fallar."</p>
-    <cite class='bqa'>- Nayeli Ccari</cite>
-    </blockquote>
-    <blockquote class='sld sl9' data-bfl='sl9'>
-    <p class='bqt'>"Cada día es una nueva oportunidad para ser la mejor versión de ti mismo."</p>
-    <cite class='bqa'>- Jimena Guillermo </cite>
-    </blockquote>
-    <blockquote class='sld sl10' data-bfl='sl10'>
-    <p class='bqt'>"Recuerda, no hay nada que él pueda hacer que tú no."</p>
-    <cite class='bqa'>- Rozzum Unit7134(Película Robot Salvaje) </cite>
-    </blockquote>
-    <blockquote class='sld sl11 sla' data-bfl='sl11'>
-    <p class='bqt'> "El único final es la muerte, y no se sabe si es feliz, o si es final. La paciencia es aprender a respirar bajo el mar."</p>
-    <cite class='bqa'>- René Tipula</cite>
-    </blockquote>
-    <div class='slb next'>&#10095;</div>
-    </div>
-    <div class='mshi'>
-    </div>
-    </div>
-    <!--NOTEPAD[END]-->
-    </div>
-    <!--MISTYLES -->
-    <div class='pssab'>
-    <div class='thms'>
-    <div class='thm th1 mtha' data-mth='Dulce#FF2D54'></div>
-    <div class='thm th2' data-mth='Paz#00D252'></div>
-    <div class='thm th3' data-mth='Naranja#FF7A00'></div>
-    <div class='thm th4' data-mth='Sky#0077CC'></div>
-    <div class='thm th5' data-mth='Mora#7000FF'></div>
-    <div class='thm th6' data-mth='Noche#1A237E'></div>
-    </div>
-    </div>
-    <!--JESUS ES MI SALVADOR PAGE[DSCTO END]-->
-      
-          <script id="rendered-js" >
-    function mijQuery(){window.jQuery&&window.$?!window.done&&(window.done=true,$(function(){
-    //DIOS ES MI SALVADOR[START] 
-    //DIOS ES BUENO [START PAGE]
-    //PARA CSS Y AÑO
-    $('#yr').text(new Date().getFullYear());
-    $('#fechahoy').val(new Date().toLocaleDateString('es-ES'));
-    function adr(x,y){$(x).addClass(y).siblings().removeClass(y)}
-    function atc(x,y){$(x).addClass(y).delay(3000).queue(q=>$(x).removeClass(y).dequeue())}
-    function atm(x,y,z){$(x).text(y).addClass('btha').delay(1800).queue(q=>$(x).text(z).removeClass('btha').dequeue())}
-    $('.nplm').click(function(){$('.mrp').toggleClass('dpb')});
-    $('.npl').click(function(){adr(this,'npla')});
-    
-    // PARA DISEÑOS 
-    $('.bhj').click(e=>{const n=$(e.target).data('hjs').slice(2);$('.mpd'+n).addClass('mpda').siblings().removeClass('mpda');$(e.target).addClass('bha').siblings().removeClass('bha')});
-      
-    // PARA DESCUENTOS
-    function awis(x,y){$(x).addClass(y);setTimeout(()=>$(x).removeClass(y),2800)}
-    $('input').on('input',function(){$(this).val($(this).val().replace(/,/g, '.').trim())});
-    function midscto(){
-      $('#rst').val((pvl=parseFloat($('#pln').val())||0, dvl=parseFloat($('#dsc').val())||0, Math.floor((pvl*(1-dvl/100))*100)/100));
-      $('.txd').html(`Tendra un ahorro de s/ <b>${Math.floor((pvl-$('#rst').val())*100)/100}</b>`);
-    }
-    function mauto(){
-    if($('.auto').hasClass('npla')){
-      if($('#pln').val() <= 29.90){$('#dsc').val(20)}
-      if($('#pln').val() >= 29.91){$('#dsc').val(30)}
-      if($('#pln').val() >= 45.90){$('#dsc').val(50)} 
-      midscto();
-    }}
-    
-    $('#pln, #dsc').on('input',()=>{midscto();mauto();awis('.hr1','awis') });
-    $('.pmn, .vds').click(function() {
-      $($(this).is('.pmn') ? '#pln' : '#dsc').val($(this).data('dvl')); 
-      midscto();mauto();awis('.hr1','awis') 
-    });
-    $('.auto').click(function(){mauto();awis('.hr1','awis')});
-    // ESTILO DSCTO
-    $('.msp').click(function(){
-        $('.mrptx').text($(this).data('dvl'))
-    });
-    
-    // AJUSTE
-    function ajuste(){
-      var vrc = parseFloat($('#arc').val());
-      var vrx = parseFloat($('#arx').val()); var vrr=Math.floor((vrc-vrx) *100)/100; 
-      var vrn=Math.floor(vrr/2 *100)/100; $('#ars').val(vrn);
-      $('.at1').html('Calculando su Recibo de Plan: '+vrc+'-'+vrx+'= '+vrr)
-      $('.at2').html('Ahora, calculando ajuste del Plan: '+vrr+'/2= '+vrn)
-      $('.at3').html('Recordar al cliente que pagará: '+vrn+'+'+vrx+'= <b>'+Math.floor((vrn+vrx) *100)/100+'</b> total del mes.')
-    }
-    $('#arc,#arx').on('input',()=>{ajuste();awis('.hr2','awis'); });
-    function upds(){ $('#dsc').attr('disabled', $('.auto').hasClass('npla') ? true : false); }upds(); $('.mds').click(function(){upds()}); 
-    
-    // FUNCTION TEXTO-IMAGEN
-    let tm; 
-    function golsv($nm,$vl){
-      savels($nm,$vl,24); //Guardando por 24 horas 
-      $('.ksa').text('GUARDANDO').addClass('bha');clearTimeout(tm), tm=setTimeout(()=>$('.ksa').text('GUARDADO').removeClass('bha'),1e3);
-    }  
-    // PARA PEGAR, TRAER Y SOLTAR IMAGEN
-    $('.pdim').on('paste dragover drop',function(e){
-      e.preventDefault();var f=e.type==='paste'?e.originalEvent.clipboardData.files[0]:e.type==='drop'?e.originalEvent.dataTransfer.files[0]:null,
-      r=f?.type.startsWith('image/') && new FileReader(); r&&(r.onload=e=>$(this).html(`<img src="${e.target.result}">`),r.readAsDataURL(f));
-    })
-    // GUARDANDO TEXTO-IMAGEN
-    function svti(){
-      var $dn=$('.mpd.mpda .txe');
-      var $dv=$dn.is('textarea')? $dn.val() : $dn.is('.pdim')? $('.mpd.mpda .pdim img').attr('src') : $dn.html();
-      golsv($dn.data('entx'), $dv); 
-    }$('.txe,.ksa,.pdim img').on('input click',svti);
-    
-    // OBTENIENDO TEXTO &IMAGEN
-    $('.txe').each(function(){
-      var $mls=getls($(this).data('entx'));
-      if($mls){
-       var $ts=$(this); $('.ksa').text('GUARDADO').addClass('bha');
-       $ts.is('textarea')? $ts.val($mls): $ts.is('.pdim')? $ts.html('<img src="'+$mls+'" alt="Imagen pad"/>'): $ts.html($mls);
-      }
-    });
-    // COPIANDO & ELIMINADO TEXTO-IMAGEN
-    $('.kco, .kdl').on('click',function(){
-      var $mk=$('.mpd.mpda .txe'), $cov=$mk.is('textarea') ? $mk.val() : $mk.text();
-      $(this).hasClass('kco')? (navigator.clipboard.writeText($cov),atm('.kco','COPIADO','COPIAR')):(removels($mk.data('entx')),$mk.val('').html(''),atm('.kdl','ELIMINADO','ELIMINAR'));  
-    });
-    
-    // CALCUDORA DINAMICA
-    $('.pdcd').on('input',function(){
-      const t=$(this),s=t.text(),r=s.replace(/(\d*\.?\d+)\s*([\+\-\*\/])\s*(\d*\.?\d+)\s*=(?!\s*\d)/g,(m,n1,o,n2)=>{try{const res=eval(n1+o+n2);const formattedRes=Number.isInteger(res)? res:res.toFixed(2);return `${m}${formattedRes}`;}catch{return m;}});if(s!==r){t.text(r);const sel=window.getSelection(),range=document.createRange();range.selectNodeContents(this);range.collapse(false);sel.removeAllRanges();sel.addRange(range);}})
-      .on('keydown',e=>{if(e.key==='Enter'){e.preventDefault();document.execCommand('insertLineBreak');}
-    });
-    
-    // PARA CALCULAR EL TIEMPO
-    $(function() {
-        var hoy = new Date();
-        $("#fechahoy").val(hoy.toLocaleDateString('es-ES'));
-        function mtiempo(){
-            var [d, m, y] = $("#fecha0").val().split('/');
-                if (y.length === 2) y = "20" + y;
-                var inicio = new Date(y, m - 1, d),
-                meses = (hoy.getFullYear() - inicio.getFullYear()) * 12 + hoy.getMonth() - inicio.getMonth() ,
-                dias = hoy.getDate() - inicio.getDate();
-            if (dias < 0) meses--, dias += new Date(hoy.getFullYear(), hoy.getMonth(), 0).getDate();
-            $("#mtiempo").text(`${meses} meses y ${dias} días`); 
-        }mtiempo(); function checkf(){$('.tfecha').addClass('chf');setTimeout(()=>$('.tfecha').removeClass('chf'),2800)}
-        $("#fecha0").on('input',()=>(mtiempo(), checkf()));
-        $('#fechayes').on('click',function(){checkf();atc('.tfecha','ztx')});
-    });
-          
-    // UDAPTED PAGE
-    setInterval(function(){
-      adr('.upd0','upda')
-    },  4 * 60 * 60 * 1000) //Cada 4horas
-    $('.upd0').click(function(){location.reload()});
-    $('.upwb').hover(function(){
-        $(this).attr('title', $('.upd1').hasClass('upda') ? 'Excelente! Estás actualizado' : 'Oh no! Te falta actualizar');
-    });$('.upt').text(' ' + new Date().toLocaleString())
-      
-    // ESTILOS DINAMICOS 
-    var svs = Cookies.get('mbg') || 'ms1';
-    var mth = {ms1:'#ff808a',ms2:'#38d63d',ms3:'orange',ms4:'#007EB1',ms5:'#5c00d2',ms6:'#2e384c'};
-    $('head').append('<meta name="theme-color" content="' + mth[svs] + '">');
-    $('body').attr('class', svs);
-    $('.mst').removeClass('sta').filter('.' + svs).addClass('sta');
-    $('.mst').click(function () {
-        var n = $(this).data('sts');
-        $('body').attr('class', n);
-        $(this).addClass('sta').siblings().removeClass('sta');
-        Cookies.set('mbg', n, { expires: 35 });
-        $('meta[name="theme-color"]').attr('content', mth[n]);
-    }); 
+<style id='page-skin-1' type='text/css'><!--
+:root{--fz_s1:.57vw;--fz_s2:.63vw;--fz_s3:.7vw;--fz_s4:.78vw;--fz_m:.8vw;--fz_d:.8vw;--fz_m1:.85vw;--fz_m2:.9vw;--fz_l1:1.02vw;--fz_l2:1.18vw;--fz_l3:4.8vw;--ff_P:'Poppins',segoe ui;--ff_R:'Rubik',segoe ui;--F:#fff;--0:#000;--D:#ddd;--Y:yellow;--B:#eef3f7}:root[data-theme="Dulce"]{--wb:#ffe5e8;--tx1:#000;--mco:#FF5C69;--cos:#ff293b;--hv0:#ff858f;--hv1:#060505;--bco:#ffadb4;--shc:#ff99a1;--bga:#ff4d5b;--bg:#ffd1d5;--cowa:#fff;--cow:#ff1a2d;--txec:var(--0);--hv:#ff808a;--hva:#ff3849}:root[data-theme="Cielo"]{--wb:#c2ecff;--tx1:#000;--mco:#1976d2;--cos:#166bc0;--bco:#75daff;--shc:#52d1ff;--bga:#1976d2;--bg:#75daff;--cowa:#fff;--cow:#12579b;--txec:var(--0);--hv:#4596e8;--hva:hsl(210, 75%, 41%)}:root[data-theme="Paz"]{--wb:#c2ffc4;--tx1:#000;--mco:#29C72E;--cos:#00b300;--bco:#80e583;--shc:#6be16f;--bga:#00b300;--bg:#88e78c;--cowa:#fff;--cow:#008000;--txec:var(--0);--hv:#32d23a;--hva:hsl(120, 60%, 36%)}:root[data-theme="Mora"]{--wb:#eee0ff;--tx1:#000;--mco:#7000FF;--cos:#5800cc;--bco:#a866ff;--shc:#9d52ff;--bga:#5800cc;--bg:#dfc7ff;--cowa:#fff;--cow:#6e00ff;--txec:var(--0);--hv:hsl(266, 88%, 67%);--hva:#5400c2}:root[data-theme="Futuro"]{--wb:#3d5185;--tx1:#fff;--mco:#00f3ff;--cos:#00f3ff;--bco:#3b4568;--shc:#2e3652;--bga:#00cbd6;--bg:#00b8c2;--cowa:#fff;--cow:#3b4568;--txec:#3b4568;--hv:hsla(183, 100%, 48%, 0.683);--hva:hsl(183, 87%, 33%)}.thp{background:#29C72E}.thd{background:#FF5C69}.thc{background:#0EBEFF}.tho{background:#7000FF}.thf{background:#21273B}.mthemes{top:35vh;position:fixed}.thm{width:1.7vw;height:2.3vw;display:flex}.thm:hover,.mtha{width:2.3vw;border-radius:0 .3vw .3vw 0}*{margin:0;padding:0;cursor:pointer;color:var(--tx1);box-sizing:border-box;scroll-behavior:smooth;font-size:var(--fz_m);font-family:var(--ff_P)}body{background:var(--bco);padding-block:1vh .5vh}.bg .wb{box-shadow:none}.bg::before{content:"";top:0;left:0;width:100%;height:100%;background-size:cover;background-position:center;filter:blur(.5vw);z-index:-1;background-image:var(--dbg)}input,textarea,button,.txen{cursor:auto;border:none}button{cursor:pointer}img,input{max-width:100%}input{width:100%;border:.05vw solid var(--bg)}input:focus{outline:.05vw solid var(--bga)}.wida input,.fva,.fba{color:var(--cow)}.txc,.pers,.prin,.ths,.tsb,.lba,.lba input{text-align:center}[data-wicon] svg,.rwi svg{width:var(--fz_s3);fill:var(--mco)}.df,.dfc,.sepl>*,.dfw,.dfcc,.sepl,.dfa,.dfac,.df2,.dfh,.df3,.pdim{display:flex}.dfa,.df3{gap:1vh}.dfc,.sepl>*,.pdim{justify-content:center;align-items:center}.dfw{justify-content:space-between}.dfcc{justify-content:center;align-items:center;flex-direction:column}.sepl>*,.dfa{flex:1 1 auto}.dfac{flex-wrap:wrap}.dfac>*{flex:1 1 auto}.dfh>*{flex:1 1 49%}.df2>*{flex:1 1 49%}.df3>*{flex:1 1 32%}.dg,.dgc,.dg2,.dg3,.her,.lba{display:grid}.dgc{justify-content:center;align-items:center}.dpn,.upb,.pad{display:none}.dpb,.upba{display:block}.dpf,.pada{display:flex}.psr,body,.mids,.wito,.wino,.wihe,.slide{position:relative}.psa,.bpad,.upw,.tnp,.pfull,.xfull,.tiempo,.frases,.bg::before{position:absolute}.miwb{max-width:91vw;margin:auto;height:98vh;display:grid;gap:.25vw;grid-template:.3fr .8fr 1fr / 2fr 1fr}.wihe{grid-row:span 3}.wb{background:var(--wb);border-radius:.28vw;border:.01vw solid var(--shc);box-shadow:.12vw .12vw .3vw .3vw var(--shc)}.wb:hover{transform:translateY(-.20vh)!important;transition:all .3s ease-out!important}button:hover,svg:hover,.imgw img:hover{transform:translateY(-.35vh);transition:all .35s ease-out}.bgw,.wdp{background:var(--bg);color:var(--cow);border:.07vw solid var(--bga);font-weight:600}.bgwa,.bgw:hover,.wdp:hover{background:var(--bga);color:var(--cowa);transition:all .3s ease-in-out}.mids h4{color:var(--tx1)}.bgx .mids h3,.bgx .mids h4,.bgx .mids h3{color:var(--cos)}.upw{width:1.71vw;top:.7vh;right:1vw}.upw svg{width:2vw}.mids{padding:1vh;height:100%;background-size:cover}.saludo{font-size:var(--fz_m2);padding-block:0 1.5vh}.hora{font-size:var(--fz_l2);padding-block:.5vh}.tiempo,.frases{bottom:1vh}.tiempo{left:.9vw;text-transform:uppercase}.frases{right:.5vw;width:53%;text-align:right}.bqt,.bqa{font-size:var(--fz_s3)}.pers *{font-size:var(--fz_s3)}.pers img{height:100%}.prin{padding:.5vh;border-radius:.25vw}.rstb{display:block;text-align:right}.rsb{padding:.6vh .7vw;border-radius:.25vw;font-size:var(--fz_s3)}.thm:hover,.mtha{transition:.5s ease-in-out}.secd{border-top:.03vw solid var(--mco)}.secob{padding-block:0 .7vh}.tdob{padding-block:.5vh}.tdt{padding-block:.7vh 1.2vh}.perfz{padding-block:0 1vh}.prb{border-radius:.25vw;width:4vw;height:6vh;flex:1 1 auto;background-size:cover}.prir{background:var(--bg)}.secbg{padding-block:0 1vh}.dtxs,.dtxc{gap:.25vw;margin-right:.45vw}.dfx{padding:.5vh .7vw;border-radius:.25vw}.wdp{padding:.5vh .7vw;border-radius:.15vw}.fva,.fba{border:.05vw solid var(--bg);background:var(--F)}.wino{background:var(--F)}.pads{height:100%}.pads>*{border-radius:.28vw}.txe{width:100%;height:100%;color:var(--txec);background:var(--F);padding:3.5vh .5vw;word-break:break-all;overflow-y:auto;max-height:36vh;cursor:text}.txe:focus{outline:none}.pdim{font-size:var(--fz_s3)}.pdim img{height:100%}.bpad{bottom:0;width:100%}.bpad svg:hover{fill:var(--F)}.pad{height:100%}.tnp{top:0;width:100%;font-size:var(--fz_s3);padding:.35vh}*::-webkit-scrollbar{width:.45vw}*::-webkit-scrollbar-track{background:var(--shc)}*::-webkit-scrollbar-thumb{background:var(--mco);border-radius:.15vw}.pfull{width:100%;height:100%;z-index:1;top:0}.pfull .txe{max-height:100%;height:100%;padding:6vh 2vw}.xfull{top:0;right:0}.xfull svg{width:3vw}.ctime{padding:0 1vw}.ctime *{display:flex;text-align:center;align-items:center;justify-content:center}.ctime input,.ctime button{padding:.5vh;border-radius:.18vw;margin-left:.25vw}.wito{height:100%;padding-top:2.3vh;gap:1.5vh}.txe,textarea{font-size:var(--fz_d)}.bstema{top:1.3vh;right:.6vw}.bstema svg{width:1.4vw}.bgx .bstema svg,svg:hover{fill:var(--cow)}.rtis{top:65%;right:21%}.ths{font-family:var(--ff_R)}h1{font-weight:800;padding-block:1.6vh 0;font-size:var(--fz_l2);text-shadow:.15vh .16vw .12vw var(--bco);letter-spacing:.08vw}.tsb{font-size:var(--fz_s1)}.hers{gap:1.3vh;padding:1vh .8vw}.her{gap:.6vw;grid-template-columns:10vw auto}.lba{grid-template-columns:5vw auto;align-items:center;gap:.2vw}.lba input{padding:.7vh .2vw}.sepl{display:flex;flex-wrap:wrap;gap:.28vw}.hvm,.sepl>*,.bts{background:var(--hv);color:var(--cowa);font-family:var(--ff_R);font-weight:500}.hvma,.sepl>*:hover,.dta,.bpad .bts:hover,.btha{background:var(--hva);transition:all .5s ease-in-out}.sepl>*{padding:.7vh .5vw;font-size:var(--fz_d)}.sepl>*:hover,.dta{font-weight:700}.bts{border:none;padding:1vh .35vw;font-size:var(--fz_s3)}.bpad .bts:hover,.btha{transform:none;font-weight:600}.sepl>*,.lba input{border-radius:.15vw}.lba>*{font-weight:600;text-align:right}.plan{padding:.9vh .5vw}.sepl *:hover{transform:scale(1.05);transition:all .5s ease-in-out}.lba input,.ctime input{color:var(--hva)}.bpad svg{fill:var(--F)}.res{background:none;color:var(--tx1);justify-content:start;font-family:var(--ff_P);font-weight:500}.res:hover{background:none;font-weight:500;transform:none}.ajus *{text-align:center}.ajus{padding:1.5vh 1vw .6vh 1vw}.ajus .lba{grid-template-columns:auto}.expl{font-size:var(--fz_s3);letter-spacing:.015vw}.foo{bottom:.05vh}.lkme{color:var(--hva);text-decoration:none;font-weight:600}.ftx{font-size:var(--fz_s2)}.slis{gap:1vh;padding:1.2vh 1vw 0;grid-template-columns:18vw auto}.sli{height:46vh;border:.1vw solid var(--mco);border-radius:.2vw}.buscar{padding:.5vh .2vw;outline:.03vw solid var(--bga)}.benes{gap:1vh;height:100%;padding:4.3vh .2vw 0;overflow:hidden auto}.bene{width:100%;background:var(--bg);border:.01vw solid var(--shc);border-radius:.15vw;text-align:center;font-size:var(--fz_s3)}.benes img{display:block}.slide i{width:1vw;padding-top:26%}.slide svg{width:2.1vw;position:absolute}.imgw{padding-block:.5vh}.imgw img{max-height:100%;margin-block:3vh;border-radius:.25vw;box-shadow:.25vw .25vw .3vw var(--bg)}[data-iclas="es1"] svg{fill:var(--bg);cursor:not-allowed}.vri{top:0;left:25%}#ires,#iraj{background:var(--wb);outline:.01vw solid var(--bga);transition:all .3s ease-in-out}.ina #idesc,#ires,.ina #ires,.ina #iraj{font-weight:700;background:var(--wb);outline:.05vw solid var(--bga);transition:all .3s ease-in-out}.prtc{top:45%;padding:10vh;background:var(--bg);height:55%}.prtc b{text-align:center;display:block;padding-block:2vh 1vh}.prtc p{line-height:3.5vh}.prtc .okpp{display:block;margin:1vh auto;text-align:center}.wicheck{margin:-.4vw 0 0 .2vw}.wicheck svg{width:.9vw;fill:var(--hva)}.rewi{top:0;right:0}.rewia{top:3vh}.ftm *{color:var(--hva)}@media (max-width:770px){*{cursor:auto}:root{--fz_s1:1.1vw;--fz_s2:1.25vw;--fz_s3:1.3vw;--fz_s4:1.4vw;--fz_d:1.5vw;--fz_m:1.5vw;--fz_m1:1.6vw;--fz_m2:1.7vw;--fz_l1:1.8vw;--fz_l2:2vw;--fz_l3:8.5vw}.miwb{height:auto;grid-template:auto 12% 33% 39% / 100%;max-width:98vw;gap:1vh}.wihe{grid-row:auto;padding-block:0 5vh}.her{grid-template-columns:20% auto}.lba{grid-template-columns:50% auto;gap:2%}.sepl>*{padding-inline:2vw}}@media (max-width:570px){:root{--fz_s1:2vw;--fz_s2:2.2vw;--fz_s3:2.3vw;--fz_s4:2.4vw;--fz_d:2.5vw;--fz_m:2.5vw;--fz_m1:2.7vw;--fz_m2:2.8vw;--fz_l1:3vw;--fz_l2:3.3vw;--fz_l3:9.5vw}.her,.lba,.slis{grid-template-columns:auto}.her{gap:1vh}.lba>*{text-align:center}.sepl>*{padding:1vh 1.2vh}}
+
+--></style>
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+</head>
+<body class='ms1'>
+<!--JESUS ES MI SALVADOR PAGE[DSCTO V24 2329559584696580089]-->
+<div class='miwb'>
+<div class='wihe wb'>
+<h1 class='ths'>CALCULADORA MÓVIL</h1>
+<p class='tsb'>(Calcula mucho más rápido los descuentos)</p>
+<div class='hers dg'>
+<!-- HERRAMIENTA PLANES-->
+<div class='her'>
+<label class='lba' for='iplan'><span>PLAN: </span><input class='mplan' id='iplan' type='text' value='69.90'/></label>
+<div class='planes sepl'>
+<div class='plan dta' data-pvl='20.90'>20.90</div>
+<div class='plan' data-pvl='25.90'>25.90</div>
+<div class='plan' data-pvl='27.90'>27.90</div>
+<div class='plan' data-pvl='29.90'>29.90</div>
+<div class='plan' data-pvl='32.90'>32.90</div>
+<div class='plan' data-pvl='31.90'>31.90</div>
+<div class='plan' data-pvl='35.90'>35.90</div>
+<div class='plan' data-pvl='39.90'>39.90</div>
+<div class='plan' data-pvl='42.90'>42.90</div>
+<div class='plan' data-pvl='45.90'>45.90</div>
+<div class='plan' data-pvl='49.90'>49.90</div>
+<div class='plan' data-pvl='55.90'>55.90</div>
+<div class='plan' data-pvl='59.90'>59.90</div>
+<div class='plan' data-pvl='65.90'>65.90</div>
+<div class='plan' data-pvl='69.90'>69.90</div>
+<div class='plan' data-pvl='74.90'>74.90</div>
+<div class='plan' data-pvl='79.90'>79.90</div>
+<div class='plan' data-pvl='82.90'>82.90</div>
+<div class='plan' data-pvl='85.90'>85.90</div>
+<div class='plan' data-pvl='89.90'>89.90</div>
+<div class='plan' data-pvl='99.90'>99.90</div>
+<div class='plan' data-pvl='114.90'>114.90</div>
+</div>
+</div>
+<!-- HERRAMIENTA DESCUENTO-->
+<div class='her'>
+<label class='lba' for='idesc'><span>DESCUENTO: </span><input class='mdes' id='idesc' type='text' value='50'/></label>
+<div class='desc sepl'>
+<div class='des dta' data-pde='auto'>AUTO</div>
+<div class='des' data-pde='20'>20%</div>
+<div class='des' data-pde='30'>30%</div>
+<div class='des' data-pde='40'>40%</div>
+<div class='des' data-pde='50'>50%</div>
+</div>
+</div>
+<!-- HERRAMIENTA RESULTADO-->
+<div class='her'>
+<label class='lba psr' for='ires'><span>RESULTADO: </span><input class='mres' id='ires' type='text' value='34.95'/><i class='rewi rewid psa'></i></label>
+<div class='resus sepl'>
+<div class='res psr'> Tendra un ahorro de s/ 13.98</div>
+</div>
+</div>
+</div>
+<h2 class='ths'>AJUSTE CON RECONEXIÓN O PAQUETE</h2>
+<p class='tsb'>(Cuando el cliente se queja por cobros de su Plan)</p>
+<!-- AJUSTES -->
+<div class='ajus dfa ajustes'>
+<label class='lba' for='irec'><span>RECIBO: </span><input class='iaju' id='irec' type='text' value='69.90'/></label>
+<label class='lba' for='irex'><span>RECONEXIÓN: </span><input class='iaju' id='irex' type='text' value='9.99'/></label>
+<label class='lba' for='ifra'><span>FRACCIONAMIENTO: </span><input class='iaju' id='ifra' type='text' value='0'/></label>
+<label class='lba' for='ipaq'><span>PAQUETES: </span><input class='iaju' id='ipaq' type='text' value='0'/></label>
+<label class='lba psr' for='iraj'><span>MONTO AJUSTAR: </span><input class='raju' id='iraj' type='text' value='29.95'/><i class='rewi rewia psa'></i></label>
+</div>
+<p class='expl exp1 txc'><b>Explicación:</b> Estamos ajustando su plan (-)restando la reconexión: 69.90 -9.99 = 59.90</p>
+<p class='expl exp2 txc'>Por lo tanto el cliente pagará: 34.95 + 9.99 = S/ 49.90 del mes</p>
+<!-- BANER IMAGENES-->
+<div class='slis slides dg'>
+<div class='sli slitex psr'>
+<input class='buscar psa' id='buscar' placeholder='Buscar' type='text'/>
+<div class='benes dfac'></div>
+</div>
+<div class='sli slide dfw'></div>
+<!--SLIDES IMAGENES-->
+</div>
+<footer class='dfc'>
+<div class='foo ftx txc psa'>Creado con <span data-wicon='corazon'></span>by <a class='ftx lkme' href='https://wtaype.github.io/' target='_blank'>@wilder.taype</a>  2023 - <span class='wty ftx'></span><span class='prt ftx'> | Política de privacidad</span> | Actualizado: <span class='wtu ftx'>
+</span>
+</div>
+</footer>
+<!--ACTUALIZACIONES[START]-->
+<div class='pfull dpn'><i class='xfull' data-wicon='x'></i></div>
+<!--TERMINOS CONDICIONES-->
+<div class='prtc psa dpn'>
+<b>Política de Privacidad</b>
+<p>Calculadora Movil es una herramienta tiene como propósito facilitar el cálculo de descuentos, la gestión de tiempos y proporcionar un bloc de notas para apoyo en anotaciones. Todos los datos ingresados se almacenan localmente en el dispositivo del usuario, sin compartirse con terceros en ningún caso.</p><p>Se recomienda proteger la información almacenada y utilizar "Calculadora Movi" exclusivamente con fines educativos y en entornos profesionales dentro de la empresa. Cabe destacar que la función que el aplicativo esta implementado con botones de reset y limpiesa para eliminar los datos almacenados automáticamente después de un periodo de 24 horas máximo 7 días despues de su registro, asegurando que toda la información se borre de cookies o almacenamiento local al concluir ese plazo.</p>
+<button aria-label='ENTENDIDO' class='okpp bts'>ENTENDIDO</button>
+</div>
+<div class='upw'>
+<div class='upb upd0' data-wicon='reload'></div>
+<div class='upb upd1 upba' data-wicon='check-cuadrado'></div>
+</div>
+</div>
+<!--NOTEPAD[START]-->
+<div class='wito wb dfcc'>
+<h3 class='tnp txc bgwa'>CALCULAR TIEMPO DE DSCTO/BONO</h3>
+<div class='ctime df3'>
+<label for='tde'><span>Desde:</span><input id='tde' type='text' value='29/01/2025'/></label>
+<label for='tda'><span>Hoy:</span><input id='tda' type='text' value='29/01/2025'/></label>
+<button aria-label='CALCULAR' class='bgwa btm'>CALCULAR</button>
+</div>
+<div class='rtiempo'>El Resultado es: 0 meses y 2 días</div>
+</div>
+<div class='wino wb'>
+<h3 class='tnp txc bgwa'>CALC DINÁMICA/NOTEPAD/IMAGEN</h3>
+<div class='pads'>
+<div class='pad pada' data-pdm='pm1'><div class='txe' contenteditable='true' id='txe1'>Notas 1</div></div>
+<div class='pad' data-pdm='pm2'><textarea class='txe' id='txe2' name='nth2'>Notas 2</textarea></div>
+<div class='pad' data-pdm='pm3'><textarea class='txe' id='txe3' name='nth3'>Notas 3</textarea></div>
+<div class='pad' data-pdm='pm4'><textarea class='txe' id='txe4' name='nth4'>Notas 4</textarea></div>
+<div class='pad' data-pdm='pm5'><div class='txe pdim txc' id='txe5'>(CTRL + V) PARA PEGAR IMAGEN</div></div>
+</div>
+<div class='bpad dfw'>
+<div class='nbx dfc'>
+<span class='bts bth btha' data-pdh='ph1'>NOTA1</span>
+<span class='bts bth' data-pdh='ph2'>NOTA2</span>
+<span class='bts bth' data-pdh='ph3'>NOTA3</span>
+<span class='bts bth' data-pdh='ph4'>NOTA4</span>
+<span class='bts bth' data-pdh='ph5'>IMGS</span>
+</div>
+<div class='nby dfc'>
+<button aria-label='Icono' class='bts bfu' data-wicon='screen-on'></button>
+<button aria-label='GUARDAR' class='bts bsv'>GUARDAR</button>
+<button aria-label='ELIMINAR' class='bts bdl'>ELIMINAR</button>
+<button aria-label='COPIAR' class='bts bco'>COPIAR</button>
+</div>
+</div>
+</div>
+<!--DASHBOARD[START]-->
+<div class='wida mids wb'>
+<h3 class='saludo txc'>Buenos días</h3>
+<div class='secd secob'>
+<h4 class='tdob'>Establecer objetivos:</h4>
+<div class='pers perob df3 txc'>
+<label for='obje'>Objetivo: <input class='prin prio' id='obje' type='text' value='7'/></label>
+<label for='avan'><span class='prla'>Vamos:</span>
+<input class='prin pria' id='avan' type='text' value='0'/></label>
+<label for='ress'><span class='prlr'>Te falta:</span>
+<input class='prin prir' id='ress' readonly='readonly' type='text' value='7'/></label>
+</div>
+</div>
+<div class='secd'>
+<h4 class='tdt tdfz'>Personaliza Ancho y fuentes:</h4>
+<div class='pers perfz dfc'>
+<div class='dtxs dfc'>
+<p>Tamaño texto titulos:</p>
+<button aria-label='Tamaño -' class='dfx fvi bgwa'>-</button>
+<span class='dfx fva' data-fvas='0.8'>0.8</span>
+<button aria-label='Tamaño +' class='dfx fvf bgwa'>+</button>
+</div>
+<div class='dtxc dfc'>
+<p>Ancho del App:</p>
+<span class='wdp bgwa' data-wdp='91'>Normal</span>
+<span class='wdp' data-wdp='99'>Completo</span>
+</div>
+</div>
+</div>
+<div class='secd secbg'>
+<h4 class='tdt tdbg'>Personaliza imagen fondo:</h4>
+<div class='pers perbg'></div>
+</div>
+<div class='rstb'>
+<button aria-label='RESET' class='rsb reset bgw'>RESET</button>
+<button aria-label='LIMPIAR' class='rsb resett bgw'>LIMPIAR</button>
+</div>
+<div class='ftm dfw'>
+<blockquote class='frases'>
+<span class='bqt'></span>
+<cite class='bqa'></cite>
+</blockquote>
+<div class='tiempo'>
+<h3 class='hora'>7:06:33 p. m.</h3>
+<h3 class='fecha'>domingo, 19 de enero de 2025</h3>
+</div>
+</div>
+<div class='psa bstema' data-wicon='tema'></div>
+</div>
+</div>
+<!--WIDGETS[START]-->
+<div class='miwg widgets'>
+<div class='mthemes'><!--TEMAS WEB-->
+<div class='thm thd mtha' data-tema='Dulce|#FF5C69'></div>
+<div class='thm thc' data-tema='Cielo|#0EBEFF'></div>
+<div class='thm thp' data-tema='Paz|#29C72E'></div>
+<div class='thm tho' data-tema='Mora|#7000FF'></div>
+<div class='thm thf' data-tema='Futuro|#21273B'></div>
+</div>
+<!--EVENTOS[START]-->
+<div class='stars'></div>
+</div>
+<!--JESUS ES MI SALVADOR PAGE[DSCTO END]-->
+<div class='no-items section' id='foooo' name='foooo'></div>
+<script>
+function mijQuery(){window.jQuery&&window.$&&!window.done?(window.done=1,$(function(){ 
+//JESUS ES MI SALVADOR [START MIJQUERY] 
+// FUNCIONES GENIALES 
+$('.wty').text(new Date().getFullYear());
+$('.wtu').text(new Date().toLocaleString())
+function adrm(a,b){$(a).addClass(b).siblings().removeClass(b)}
+function adtm(x,y,z){$(x).text(y).addClass('btha').delay(1800).queue(q=>$(x).text(z).removeClass('btha').dequeue())} 
+// RECURSOS IMPORTANTES 
+let wicon ="https://cdn.jsdelivr.net/gh/wtaype/wicon@v1.74/wicon.min.js";
+let mstyles = '@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"); .imgw[href^="http"]::after{content:"";position:absolute;background:url(https://cdn-icons-png.flaticon.com/512/74/74910.png);background-size:contain;background-repeat:no-repeat;background-position:center;background-color:rgb(255 255 255 / .7);background-blend-mode:overlay;padding:1vh;width:27%;height:6%;top:.3vh;right:.1vw}';
+const gooanly = '<script src="https://www.googletagmanager.com/gtag/js?id=G-GH0352JLML"><\/script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","G-GH0352JLML")<\/script>';   
+$('head').append(`<style>${mstyles}</style><script src="${wicon}"><\/script> ${gooanly}`);
+
+// DATACENTER - BENEFECIOS
+const benes = [
+  { nombre: 'DESCUENTO', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/2y36pTwm/Descuento1.png', 'https://i.postimg.cc/tJfg9PS6/Descuento2.png', ]
+  },{
+    nombre: 'BONO', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/8CY5SzXn/BONO.avif'] 
+  },{
+    nombre: 'AJUSTE', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/fTyqFgsT/AJUSTE.png', ]
+  },{
+    nombre: 'DISNEY (Ofrecimiento)', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/q7qRS3w3/Disney-Ofre.png', ]
+  },{
+    nombre: 'DISNEY (Contrato)', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/PrKwgt1J/Contrato-Disney.jpg', ]
+  },{
+    nombre: 'PLANES AHORROS >20.90', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/rybdkKWX/Mis-PLANES.avif', ]
+  },{
+    nombre: 'PLANES ILIM >69.90', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/L4b3q4d2/CAPL.avif', ]
+  },{
+    nombre: 'PLAN ADICIONAL', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/Y23xtNRG/Plan-Adicional.avif', ]
+  },{
+    nombre: 'PERMANENCIA', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/5yd2XkVB/PERMANENCIA.png', ]
+  },{
+    nombre: 'RESET', 
+    link: '#',
+    imagen:[ 'https://i.postimg.cc/ZYpqGZ8V/RESET.png', ]
+  },{
+    nombre: 'PADLET NUEVO', 
+    link: 'https://padlet.com/tmpretencionesabd/tmp-outb-retenciones-abd-rdvtk1c7qvse92tr',
+    imagen:[ 'https://i.postimg.cc/NLhBJSw-G/Padlet-Nuevo.webp', ]
+  },{
+    nombre: 'PADLET ANTIGUO', 
+    link: 'https://padlet.com/gtorresp16/equipo-retenciones-abd-bj5cdbnws7pldw9k',
+    imagen:[ 'https://i.postimg.cc/JnnrGjq8/Padlet-Antiguo.avif', ]
+  },{
+    nombre: 'CICLOS FACTURACIÓN', 
+    link: 'https://padlet.com/tmpretencionesabd/tmp-outb-retenciones-abd-rdvtk1c7qvse92tr/wish/lDK1ZRbwjow4ZJ9z',
+    imagen:[ 'https://i.postimg.cc/1RbF1zmX/CFacturacion.webp', ]
+  },{
+    nombre: 'DESCUENTOS NUEVOS', 
+    link: 'https://padlet.com/tmpretencionesabd/tmp-outb-retenciones-abd-rdvtk1c7qvse92tr/wish/wKmOZ5eKA25nZzMA',
+    imagen:[ 'https://i.postimg.cc/vTxGvMkS/DESCUENTOSMAS.webp', ]
+  },{
+    nombre: 'SPARTA SMILE CX', 
+    link: 'https://smart.app.covisian.com/login',
+    imagen:[ 'https://i.postimg.cc/59XzrzMD/SPARTA.webp', ]
+  },
+]; // Tamaño: 620 x 420
+const frases = [
+  {frase: "Todo lo puedo en cristo que me fortalece", autor: "Jaci Ayala" },
+  {frase: "Lo que es para ti, te encuentra", autor: "Yessenia Goicochea" },
+  {frase: "Levantate cada mañana con ilusion de ser el mejor", autor: "Helene Rivera" },
+  {frase: "Piensa en positivo y cree en Dios, todo estará bien... &#161;Ánimo, Dios te da más FUERZA!", autor: "Wilder Taype" },
+  {frase: "El corazón no muere cuando deja de latir. El corazón muere cuando los latidos dejan de tener sentido", autor: "Nayeli Ccari" },
+  {frase: "Trabajar duro es importante, pero hay algo que importa más, creer en ti mismo", autor: "Nayeli Polo" },
+  {frase: "Olvida el pasado, disfruta el presente y planifica tu futuro", autor: "Walter Julian" },
+  {frase: "Solo me tengo a mí, no me puedo fallar.", autor: "Nayeli Ccari" },
+  {frase: "Cada día es una nueva oportunidad para ser la mejor versión de ti mismo.", autor: "Jimena Guillermo" },
+  {frase: "Recuerda, no hay nada que él pueda hacer que tú no.", autor: "Rozzum Unit7134 (Película Robot Salvaje)" },
+  {frase: "El único final es la muerte, y no se sabe si es feliz, o si es final. La paciencia es aprender a respirar bajo el mar.", autor: "René Tipula" }
+];  // DATACENTER - FRASES 
+const fondos = {
+  'Dulce': ['https://i.postimg.cc/XvXvTvTr/bgd1.webp','https://i.postimg.cc/k5Z59mmf/bgd2.webp','https://i.postimg.cc/k4bggpM9/bgd3.webp','#ff4d5b','#ffadb4'],
+  'Cielo': ['https://i.postimg.cc/1X15nr4F/bgs1.avif','https://i.postimg.cc/ry5p63YN/bgs2.avif','https://i.postimg.cc/d3RQ8ZTx/bgs3.webp','#1976d2','#75daff'],
+  'Paz': ['https://i.postimg.cc/yx66yYX6/bgp1.webp','https://i.postimg.cc/1XWmChJG/bgp2.webp','https://i.postimg.cc/QNSdx1hF/bgp3.avif','#00b300','#80e583'] ,
+  'Mora': ['https://i.postimg.cc/pdZKWyTR/bgm3.avif','https://i.postimg.cc/LsRzFjmx/bgm2.avif','https://i.postimg.cc/RFZKN96f/bgm1.avif','#5800cc','#a866ff'],
+  'Futuro': ['https://i.postimg.cc/g0j6ppxT/bgf1.webp','https://i.postimg.cc/P5280J5D/bgf3.avif','https://i.postimg.cc/zGJgdK85/bgf2.webp','#00cbd6','#3b4568']
+}; // DATACENTER - FONDOS WALLAPERS 
+let chwi ='<svg viewBox="0 0 600 500"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>'; // DATACENTER - ICONOS
+
+// MI LOCALSTORAGE 
+function savels(key,value,hours){localStorage.setItem(key, JSON.stringify({value:value,expiry:Date.now()+hours*3600000}))};function getls(key){var item=JSON.parse(localStorage.getItem(key));if(!item||Date.now()>item.expiry){localStorage.removeItem(key);return null}return item.value};function removels(key){localStorage.removeItem(key)};
+function gosave(tis, ele){$(window).on('beforeunload',()=> savels(tis,ele,168))}
+function getsave(sv,fn){const mvl = getls(sv);if (mvl) fn(mvl)}
+
+function gosaves(sel, attr, fn) {
+$(window).on('beforeunload',function(){
+  $(sel).each(function () {
+    savels($(this).attr(attr), fn($(this)), 168);
+  })});
+} //PARA GUARDAR VARIOS
+function getsaves(sel, attr, fn) {
+ $(sel).each(function(){
+   const val = getls($(this).attr(attr));
+   if(val) fn($(this), val);
+ });
+} //PARA OBTENER VARIOS
+function adtc(selector, clase) {
+    $(selector).addClass(clase);    
+    setTimeout(() => {$(selector).removeClass(clase)}, 3000);
+} //PARA AGREGAR CLASES
+function adti() { 
+    setTimeout(() => $('.wicheck').remove(), 5000);
+    return `<span class="wicheck">${chwi}</span>`;
+} //PARA AGREGAR ICONOS
+  
+//ACTUALIZANDO LA PAGINA
+const $u0 = $('.upd0'), $u1 = $('.upd1'), upd = 4*60*60*1000;// Tiempo de 4 horas
+setInterval(() => adrm($u0,'upba'), upd);
+$u0.on('click',() => location.reload());
+$('.upb').on('mouseenter', function (e){
+  $(e.target).attr('title', $u1.hasClass('upba') ? 'Excelente! Estás actualizado' : 'Oh no! Te falta actualizar'); 
+});
+// CREANDO DASHBOARD = TIEMPOS
+function updtedh(){
+const dt = new Date(), hr = dt.getHours();
+$('.saludo').text(`Buen${hr>=0&&hr<12? 'os días' :hr<18? 'as tardes' : 'as noches'}, Smile!`);
+$('.hora').text(new Date().toLocaleTimeString('es-PE')); 
+$('.fecha').text(dt.toLocaleDateString('es-PE', {weekday:'long',day:'numeric',month:'long',year:'numeric'}));
+}updtedh();
+setInterval(updtedh,1000);
+// FRASES EN EL DASHBOARD: 
+const dfrase = frases[Math.floor(Math.random() * frases.length)];
+$('.bqt').text(`"${dfrase.frase}"`);
+$('.bqa').text(`- ${dfrase.autor}`);
+// FONDO GENERAL DASHBOARD:
+$('.secbg').one('click', function() {
+  const dcss = document.createElement('style');
+  const mdcss = Object.entries(fondos).map(([tema, colors]) => 
+    `:root[data-theme="${tema}"] { 
+      --gr1: url("${colors[0]}");
+      --gr2: url("${colors[1]}");
+      --gr3: url("${colors[2]}");
+      --gr4: ${colors[3]};
+      --gr5: ${colors[4]};
+    }`
+  ).join('\n');
+  
+  dcss.textContent = mdcss;
+  document.head.appendChild(dcss);
+  
+  $.each([1,2,3,4,5], function(i,a){$(`<span class="prb" data-bgm="gr${a}" style="background:var(--gr${a}) center/cover"></span>`).appendTo('.perbg')});
+}).find('.tdbg').click(function(){
+  $(this).siblings('.perbg').toggleClass('dfa');
+  $('.perfz').toggleClass('dpn')
+}); //DINAMICO DE FONDOS
+//  FUNCIONA FONDO DINAMICO
+function superbg(element) {
+  $('body').addClass('bg');
+  const bgkey = $(element).data('bgm');
+  const vrkey = getComputedStyle(document.documentElement).getPropertyValue(`--${bgkey}`).trim();
+  document.documentElement.style.setProperty('--dbg', vrkey);
+}
+//  APLICANDO BACKGROUND IMAGE
+$('.perbg').on('click', '.prb', function () {
+   adrm(this,'prba');  superbg('.prb.prba');
+  gosave('fondo', $('html').attr('style')) 
+});
+getsave('fondo',function(mvl){
+  $('body').addClass('bg');
+  $('html').attr('style', mvl); 
+});
+$('.thm').click(function(){superbg('.prb.prba'); if($('.perbg').is(':empty')) removels('fondo') }); //ACTUALIZANDO BOTONES THEMES  
+$('.tdfz').click(function(){$('.perfz').toggleClass('dpn');$('.perbg').toggleClass('dfa')});//H4 DE FUENTES SIZES
+// ANIMACION BONITO
+function animatex(mel, desde, inicio, final, stm) {
+    mel.css({ position: 'relative', [desde]: inicio })  
+        .animate({ [desde]: final }, stm, 'swing'); 
+}  
+// OBJETIVOS
+function mobj(){
+  const vlo=$('.prio').val(), vla=$('.pria').val(), vlr= vlo - vla;
+  $('.prir').val(vlr);
+  const motiv = [
+    [['No perdemos nada'],['Intentando']],
+    [['El camino es largo'], ['Pero vale la pena']],
+    [['Tu esfuerzo'], ['Sí tiene recompensa']],
+    [['Admiro tu esfuerzo'], ['Si vamos a lograr']],
+    [['Eres valiente'], ['Tu puedes con todo']],
+    [['No te rindas'], ['Todavía se puede']],
+  ];let lsar = -1;const rmotiv = motiv.filter((_, i) => i !== lsar)[Math.floor(Math.random() * (motiv.length - 1))]; lsar = motiv.indexOf(rmotiv);
+  if(vla == 0){
+    animatex($('.prla').text('Hay que empezar'),'left','-25%','0%',600);
+    animatex($('.prlr').text('Si se puede!'),'left','-25%','0%',900);
+  }else if(vla == 1){
+    animatex($('.prla').text('Por algo se comienza'),'top','-25%','0%',600);
+    animatex($('.prlr').text('Perseverando lograremos'),'top','-25%','0%',900);
+  }else if(vla > 1 && vla < (vlo -2) ){ 
+    animatex($('.prla').text(rmotiv[0]),'top','-25%','0%',600);
+    animatex($('.prlr').text(rmotiv[1]),'top','-25%','0%',900);
+  }else if(vla == (vlo -2)){ 
+    animatex($('.prla').text('Fuerzas, tu puedes'),'right','-25%','0%',600);
+    animatex($('.prlr').text('Estamos a dos pasos'),'right','-25%','0%',900);
+  }else if(vla == (vlo -1)){
+    animatex($('.prla').text('No te rindas!'),'right','25%','0%',600);
+    animatex($('.prlr').text('Estamos a un paso'),'right','25%','0%',900);
+  }else if(vla === vlo){
+    animatex($('.prla').text('Lograstes, felicidades🎉'),'top','-25%','0%',600);
+    animatex($('.prlr').text('Te ganaste estrellita 🌟'),'top','-25%','0%',900);
+    $('.prir').val(vlo+'/'+vla);
+  }else{ 
+    animatex($('.prla').text('Ya superaste tu objetivo'),'bottom','-25%','0%',600);
+    animatex($('.prlr').text('Eres increíble'),'bottom','-25%','0%',900);
+  }
+}
+$('.prin').on('input',function(){this.value = this.value.replace(/\D/g, '');mobj()});
+gosaves('input', 'id', ($el) => $el.val()); //DATA INPUTS
+getsaves('input', 'id', function($em, val){ $em.val(val); mobj(); }); //GET INPUTS
+// ANCHO DEL APP
+function showid(tis){$('.miwb').animate({'max-width':$(tis).attr('data-wdp')+'vw'},500,"swing")}
+$('.wdp').click(function(){
+  adrm(this,'bgwa'); showid(this);
+  savels('ancho',$(this).data('wdp'),168);
+});  
+getsave('ancho',function(mvl){showid('.miwb'); $('.miwb').css('max-width', mvl+'vw'); adrm(`[data-wdp="${mvl}"]`, 'bgwa')});
+// NOTEPAD CSS ESTILOS
+$('.bth').click(function(){
+  var dtm= $(this).data('pdh').slice(2);
+  adrm(`[data-pdm="pm${dtm}"]`,'pada');
+  adrm(`[data-pdh="ph${dtm}"]`,'btha');
+  gosave('pad_actual', dtm);
+});adrm(`[data-pdm="pm${getls('pad_actual')}"]`,'pada');adrm(`[data-pdh="ph${getls('pad_actual')}"]`,'btha');
+//  GUARDANDO TEXT HTML
+function txesave(tis){gosaves($(tis),'id', ($el) => $el.is('textarea')? $el.val() : $el.is('.pdim')? $el.find('img').attr('src') :  $el.html()); adtm('.bsv','GUARDANDO','GUARDADO'); } //SAVE TXE
+$('.txe').on('input',function(){txesave(this)});
+$('.pdim').on('click, paste',function(){txesave(this)});
+getsaves('.txe','id', function($el, vl){ $el.is('textarea')? $el.val(vl) : $el.is('.pdim')? $el.html(`<img src="${vl}" alt="Imagen"/>`) : $el.html(vl) }); //GET TXE
+//  GUARDANDO IMAGEN
+$('.pdim').on('paste dragover drop',function(e){
+  e.preventDefault();var f=e.type==='paste'?e.originalEvent.clipboardData.files[0]:e.type==='drop'?e.originalEvent.dataTransfer.files[0]:null,
+  r=f?.type.startsWith('image/') && new FileReader(); r&&(r.onload=e=>$(this).html(`<img src="${e.target.result}">`),r.readAsDataURL(f));
+})
+// ELIMINANDO COPIANDO
+ $('.bco, .bdl').click(function(){
+   const $el = $('.pad.pada .txe');
+   $(this).is('.bco') ? (navigator.clipboard.writeText($el.is('textarea')? $el.val() : $el.text()), adtm('.bco','COPIADO','COPIAR')):
+   (removels($el.attr('id')),$el.is('.pdim')? $el.html('(CTRL + V) PARA PEGAR IMAGEN') : $el.val('').html(''), adtm('.bdl','ELIMINADO','ELIMINAR'));
+ });
+// PARA FULL SCREEN
+$('.bfu').click(function(){
+  $('.pfull').removeClass('dpn');
+  $('.pad.pada .txe').detach().appendTo('.pfull');
+});
+$('.xfull').click(function(){
+  $('.pfull').addClass('dpn');
+  $('.pfull .txe').detach().appendTo('.pad.pada');
+});
+// CALCULAR TIEMPO MESES DIA
+function ptiempo($el) {
+    let $dt=new Date().toLocaleDateString('es',{day:'2-digit',month:'2-digit',year:'numeric'}).split('/').join('/');
+    !$el?$('#tda').val($dt):$($el).val($($el).val().split(' ')[0].replace(/^(\d{2})\/(\d{2})\/(\d{2,4})$/,(_,d,m,y)=>`${d}/${m}/${y.length===2?'20'+y:y}`));
+    let [$d1,$m1,$y1]=$('#tde').val().split('/'),[$d2,$m2,$y2]=$('#tda').val().split('/'),
+        $ms=($y2-$y1)*12+($m2-$m1),$ds=new Date($y2,$m2-1,$d2)-new Date($y1,$m1-1,$d1);  
+   animatex($('.rtiempo').html(`El Resultado es: ${~~$ms} meses y ${~~($ds/864e5%30)} días <i class="rwi"></i>`).attr('data-mes',~~$ms),'top','-12%','0%',700);
+  
+  if(~~$ms >= 6){
+    $('.rwi').html(`${chwi} ${chwi} ${chwi}`).attr('title','Excelente! Renueva dscto 12m + bono');
+  }else if(~~$ms >= 3){
+    $('.rwi').html(`${chwi} ${chwi}`).attr('title','Muy bien! Renueva dscto 6m + bono');
+  }else{ $('.rwi').html(chwi).attr('title','Oh no! No se puede renovar'); }
+
+}ptiempo();
+$('.ctime input').on('input',function(){ptiempo(this)});
+
+// ACTUALIZANDO FONTS SIZES: 
+function aumfz(vr, paso, min, max, btn, cls, sel) {
+  let $el = $('.' + sel);
+  let size = parseFloat($el.attr('data-fvas'));
+  size = Math.min(max, Math.max(min, size + ($(btn).hasClass(cls) ? paso : -paso)));
+  document.documentElement.style.setProperty('--' + vr, size + 'vw');
+  $el.text(size.toFixed(2)).attr('data-fvas', size.toFixed(2));
+}
+$('.fvi, .fvf').click(function(){
+  aumfz('fz_d', 0.05, 0.70, 1, this, 'fvf', 'fva'); // (Aumenta =0.05, min=0.70, max=1, valor, 'final', 'text')
+  gosave('fz_actual',$('.fva').text())
+});
+$('.fva').each(function(){
+  const $el = $(this), $vl = getls('fz_actual');
+  if($vl) ($('html').css('--fz_d',$vl+'vw'), $el.attr('data-fvas', $vl).text($vl)); 
+});
+  
+// PERSONALIZACION FONDO CLARO
+$('.bstema').click(function(){
+  $('body').toggleClass('bgx');
+  gosave('stema',$('body').hasClass('bgx') ? 'bgx' : '');
+});getsave('stema',(vl)=> $('body').addClass(vl));
      
-    // SHOW PLANES AND FRASES
-    var i=0;$('.slb').click(function(){
-      i=($(this).hasClass("prev") ? (i - 1 + $(".sld").length) : i + 1) % $(".sld").length;
-      $('.sld').removeClass('sla').eq(i).addClass('sla'); adr('.mshi','dpn')
-    }); 
-    $('.bene').click(function(){adr(this,'npla')});
-    //PARA POLITIICA DE PRIVACIDAD
-    $('.prt').on('click', function(){
-        $('.prtc').removeClass('dpn');
-    }); 
-    $('.okpp').on('click', function(){
-        $('.prtc').addClass('dpn');
-    });
-    // DETECTANDO BOTON
-    $('.bhj').click(function(){Cookies.set('mab',$(this).data('hjs').slice(-1),{expires:7})}); 
-    adr('.mpd'+Cookies.get('mab'),'mpda');adr('.hj'+Cookies.get('mab'),'bha');  
-    //PARA MOSTRAR IMAGENES 
-    $('.beny').click(function(){ 
-      var dtc =$(this).data('sig'); 
-      $('.mshi').attr('data-swb', dtc)
-      adr('.msld','dpn');  savels('kmshi',dtc,24);
-    });
-    // PARA SABER DE IMAGENES LS 
-    $(function(){
-    const dils = getls('kmshi');
-      if(dils && !$('.ben0 ').hasClass('npla')) ($('.mshi').attr('data-swb', dils), $('.msld').toggleClass('dpn'));
-    })
-    // PREFERENCIAS BOTONES DSCTOS
-    // [ClaseP, svls, claseA, datas]
-    const pairs = [
-      ['mpl', 'ksml', 'npla', 'dvl'],
-      ['mds', 'ksms', 'npla', 'dvl'],
-      ['bene', 'ksbe', 'npla', 'bfl'],
-      ['sld', 'kssd', 'sla', 'bfl'],
-    ];
-    // SUBIR PREFERENCIAS ANTES DE CARGAR
-    $(window).on('beforeunload',() =>{
-      $.each(pairs, (_, [clsp, svls, clsa, dts]) => {
-        $(`.${clsp}.${clsa}`).each(function() {
-          savels(svls, $(this).data(dts), 24);
-        });
-      });
-      $('input').each((_,e)=>savels($(e).data('din'),$(e).val(),24)); //SOLO INPUTS 
-     
-    });
-    // OBTENER DATOS
-    $.each(pairs, (_, [clsp, svls, clsa, dts]) => {
-      adr(`.${clsp}[data-${dts}="${getls(svls)}"]`, clsa);
-      $('[data-din]').each((_, e)=>(v=getls($(e).data('din'))) && $(e).val(v) && midscto());
-    });
-    //FUNCIÓN PARA SUBIR IMAGENES
-    const mgfonts = 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap';
-    const mganlyt = '<script src="https://www.googletagmanager.com/gtag/js?id=G-GH0352JLML"><\/script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag("js",new Date());gtag("config","G-GH0352JLML")<\/script>';        
-    const mstyles = '.lrst:after,.chf #mtiempo:after{background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/742140/good.png)center/contain no-repeat}:root{--bgim:url("https://d35aaqx5ub95lt.cloudfront.net/images/star-pattern.svg")}.hd{background:var(--bgim),linear-gradient(to bottom,var(--co1),var(--co2))}';          
-    let benis = '';$('.beny').each(function(){benis+=`[data-swb="${$(this).data('sig')}"]{background:url('${$(this).data('ssg')}') no-repeat;background-size:cover}`});
-    $('head').append(`
-    <style>${mstyles}${benis}</style>
-    <link href="${mgfonts}" rel="stylesheet">${mganlyt}
-    `);
-      
-    // $('head').append(`<style>${mstyles}</style> `);
-    // $('.lpx').html('<img width="600" height="400" alt="Dios es bueno" src="https://i.postimg.cc/W1LZ2Try/Dios-Es-Bueno.webp"/>');
+$.each(benes.slice(0,2), function(i,ben){
+  $(`<div class="bene" data-idg="${i}" data-idl="${ben.imagen.length}"> ${ben.nombre} 
+    <img src="${ben.imagen[0]}" alt="${ben.nombre}"/>
+  </div>`).appendTo('.benes');
+}); // Para cargar los mas rapido
+$('.slides').one('mousemove scroll', function(){
+  $.each(benes.slice(2), function(i,ben){
+    $(`<div class="bene" data-idg="${i+2}" data-idl="${ben.imagen.length}"> ${ben.nombre} 
+      <img src="${ben.imagen[0]}" alt="${ben.nombre}"/>
+    </div>`).appendTo('.benes');
+  });
+}); //Para cargar con mousemove o scroll 
     
-    //DIOS ES MI SALVADOR[END] 
-    })):setTimeout(mijQuery,50)}var ldtm=7000,lQv=false;Qpvez=!localStorage.getItem('completado');Qpvez?(['click','mousemove'].map(e=>addEventListener(e,ldjQuery)),setTimeout(ldjQuery,ldtm)):ldjQuery();
-    function ldjQuery(){if(!lQv){lQv=true;if(Qpvez){removeEventListener('click',ldjQuery);removeEventListener('mousemove',ldjQuery)}var lQs=document.createElement("script");lQs.src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js";   
-    lQs.onload=()=>{localStorage.setItem('completado','ldscto');mijQuery()};document.head.appendChild(lQs)}}
-    // MIS TEMAS PAGE
-    const mtheme='Paz#0dd06a',thf=document.querySelector('meta[name="theme-color"]')||Object.assign(document.head.appendChild(document.createElement('meta')),{name:'theme-color'}),sv=v=>{const[t,c]=v.split('#');document.documentElement.dataset.theme=t,thf.content='#'+c,localStorage.mtheme=v,document.querySelector('.mtha')?.classList.remove('mtha'),document.querySelector(`[data-mth="${v}"]`)?.classList.add('mtha')};sv(localStorage.mtheme||mtheme);document.querySelectorAll('.thm').forEach(e=>e.onclick=()=>sv(e.dataset.mth));
-    // ANIMACIONES GENIALES
-    addEventListener('scroll',A=>(A=scrollY+innerHeight,document.querySelectorAll('.ani').forEach((e,i)=>A>e.offsetTop&&e.classList.add('anip')&&(e.style.transitionDelay=i*0.2+'s'))));onload=()=>dispatchEvent(new Event('scroll'));
-      // COOKIES GOOD
-    !function(e,t){typeof module=="object"&&module.exports?module.exports=t():e.Cookies=t()}(this,()=>({set:(e,t,n={})=>{try{n.expires&&(n.expires=+n.expires?new Date(Date.now()+864e5*n.expires):n.expires);t&&t.length>4000?(localStorage.setItem(e,t),document.cookie=`${e}_useLS=true;expires=${n.expires}`):document.cookie=e+"="+t+Object.entries(n).map(([e,t])=>t?";"+e+(t===!0?"":"="+t):"")}catch(e){}},get:e=>{try{return document.cookie.includes(e+"_useLS=true")?localStorage.getItem(e):(document.cookie.match("(^| )"+e+"=([^;]*)")||[])[2]}catch(e){return""}},remove:e=>{document.cookie=e+"=;expires=Thu, 01 Jan 1970";document.cookie=e+"_useLS=;expires=Thu, 01 Jan 1970";localStorage.removeItem(e)}}));
-    // GUARDANDO BLOCK DE NOTAS
-    function savels(key,value,hours){localStorage.setItem(key, JSON.stringify({value:value,expiry:Date.now()+hours*3600000}))};function getls(key){var item=JSON.parse(localStorage.getItem(key));if(!item||Date.now()>item.expiry){localStorage.removeItem(key);return null}return item.value};function removels(key){localStorage.removeItem(key)};
-        </script>
+// FUNCION SLIDE DEFAULT
+$(`<i class="iprev" data-wicon="una-flecha-left">PREV</i>
+   <a href="#" class="imgw dfc"></a>
+   <i class="inext" data-wicon="una-flecha-right">NEXT</i>`).appendTo('.slide'); //Para slides default
+function slidew(idw,iln){
+  const imgln = benes[idw].imagen.length;
+  const iclas = (imgln > 1) ? 'md1' : 'es1';
+  const itarg = (benes[idw].link === '#') ? '' : '_blank';
+  $('.imgw').html(`<img src="${benes[idw].imagen[iln]}" alt="${benes[idw].nombre}"/>`).attr({'href':benes[idw].link, 'target':itarg});
+  $('.iprev,.inext').attr({'data-imgx':idw,'data-imgl':imgln, 'data-iclas':iclas});  
+  gosave('sbene', idw); 
+}slidew(0,0); getsave('sbene',(vl)=>slidew(vl,0)); //(id 0 imagen 0)
+$(document).on('click', '.bene',function(){slidew($(this).data('idg'),0) });
+// PARA NEXT PREV
+let imx = 0;  
+$('.inext, .iprev').click(function (){
+    const id= +$(this).attr('data-imgx'), ln= +$(this).attr('data-imgl');
+    imx = ($(this).is('.inext') ? (imx + 1) : (imx - 1 + ln)) % ln;
+    slidew(id, imx);
+});
+// BUSCADOR DE BENEFECIOS 
+$(".buscar").on("input", function () {
+    let buscado = $(this).val().toLowerCase();
+    $(".bene").each(function(){$(this)[$(this).text().toLowerCase().includes(buscado) ? 'show' : 'hide']()});
+});
+
+// CALCULANDO DESCUENTOS
+  function descuento() {
+    const plan = parseFloat($('.mplan').val()) || 0;
+    let dta  = $('.des.dta').data('pde');
+    let desc = (dta === 'auto') ? (plan <= 29.9 ? 20 : plan <= 45.89 ? 30 : 50) : parseFloat(dta) || 0;
+    desc = $('.mdes').is(':focus') ? (parseFloat($('.mdes').val()) || 0) : desc;
     
-      
-    </body>
-    
-    </html>
+    const resultado = plan - (plan * desc / 100);
+    const ahorro    = plan - resultado;
+
+    $('.mdes').val(desc);
+    $('.mres').val(resultado.toFixed(2));
+    $('.vres').html(`${ahorro.toFixed(2)}`);;   
+    animatex($('.res').html(`Tendra un ahorro de s/ <b>${ahorro.toFixed(2)}</b> ${adti()}`),'top','-12%','0%',700);
+    $('.rewid').html(`${adti()}`); // Agregando check
+    adtc('.her','ina'); //Agregando clases temporal
+    gosave('vl_plan', $('.mplan').val()); //Guardando datos 
+    gosave('vl_desc', desc); //Guardando datos 
+  }getsave('vl_plan',function(vl){adrm(`[data-pvl="${vl}"]`,'dta'); $('.mplan').val(vl);descuento()});
+  getsave('vl_desc',function(vl){adrm(`[data-pde="${vl}"]`,'dta'); $('.mdes').val(vl);descuento()});
+
+  $('.plan, .des').on('click', function() {
+    if ($(this).hasClass('plan')) {
+      $('.mplan').val($(this).data('pvl'));
+    } else {
+      $('.des.dta').removeClass('dta');
+      $(this).addClass('dta');
+    }
+    descuento(); adrm(this, 'dta');  
+  });
+  $('.mplan, .mdes').on('input',function(){
+    this.value = this.value.replace(/,/g, '.').replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+    descuento();
+    let dvp = $('.mplan').val();
+    $('.planes').find(`[data-pvl="${dvp}"]`).addClass('dta').siblings().removeClass('dta');
+  });
+  
+// CALCULANDO AJUSTES
+function ajuste(){
+  let recb = parseFloat($('#irec').val());
+  let recx = parseFloat($('#irex').val());
+  let frac = parseFloat($('#ifra').val());
+  let paqe = parseFloat($('#ipaq').val());
+  let resa = $('#iraj');  
+  let sumx = Math.floor((recx + frac + paqe) *100)/100; //Suma de reconexion 9.99, fraccionamiento 1, paquetes 2 = 12
+  let resultado = Math.floor((recb - (sumx || 0)) / 2 * 100) / 100; //Resultado ajustado= 24.95
+  resa.val(resultado);  
+  let vrx = recx !=0 ? recx : '';
+  let vfr  = frac !=0 ? frac : '';
+  let vpq  = paqe !=0 ? paqe : '';
+  let vrexs = vrx != 0 && vfr == 0 && vpq == 0 ? vrx :
+              vrx != 0 && vfr != 0 && vpq == 0 ? `(${vrx} - ${vfr})` :
+              vrx != 0 && vfr == 0 && vpq != 0 ? `(${vrx} - ${vpq})` :
+              vrx != 0 && vfr != 0 && vpq != 0 ? `(${vrx} - ${vfr} - ${vpq})` : '';
+  
+  let vdif = Math.floor((recb - sumx) *100)/100; 
+  
+  let mrex = vrx == 0 && vfr == 0 && vpq == 0 ? `${vdif}/2` :  
+             vrx != 0 && vfr == 0 && vpq == 0 ? `${recb} - ${sumx} = ${vdif}/2` :  `${recb} - ${vrexs} = ${recb} - ${sumx} = ${vdif}/2`; 
+  let resultadofinal = Math.floor((resultado + sumx) *100)/100;
+  
+  $('.exp1').html(`Estamos ajustando su plan ${mrex} = ${resultado}`);
+  $('.exp2').html(`Por lo tanto el cliente pagará: ${resultado} + ${sumx} = <b>S/ ${resultadofinal}</b> ${adti()}`);
+  $('.rewia').html(`${adti()}`); // Agregando check
+  adtc('.ajus','ina'); //Agregando clases temporal
+}ajuste(); 
+$('.iaju').on('input',function(){
+  this.value = this.value.replace(/,/g, '.').replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');
+  ajuste();
+});
+// PARA POLITICAS DE PRIVACIDAD
+$('.prt').click(function(){
+  $('.prtc').toggleClass('dpn');
+})
+$('.okpp').click(function(){
+  $('.prtc').toggleClass('dpn');
+})
+// RESET Y LIMPIAR 
+$('.reset').click(function(){
+  $('body').css('background','var(--bco)');
+  $('html').css({
+    '--fz_d': '.8vw',
+    '--dbg': 'none'
+  });removels('fondo'); //Para fondo normal
+  $('.fva').text('.0.8'); removels('fz_actual'); //Para fuente normal 
+  $('.miwb').animate({'max-width':'91vw'},500,"swing");removels('ancho'); //Para ancho normal 
+});
+$('.resett').click(function(){
+  $('.txe').html('').val('');
+  $('.txe').each(function(i){
+    removels($(this).attr('id'));
+  })
+});   
+//JESUS ES MI SALVADOR [END MIJQUERY] 
+})):setTimeout(mijQuery,50)}let lQt=7000,lQv=0,lQz=!localStorage.getItem('wquery');lQz?(["scroll","mousemove"].forEach(e=>addEventListener(e,ldjQuery)),setTimeout(ldjQuery,lQt)):ldjQuery();function ldjQuery(){if(!lQv){lQv=1;lQz&&["scroll","mousemove"].forEach(e=>removeEventListener(e,ldjQuery));let s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js";s.onload=()=>{localStorage.setItem("wquery","wi");mijQuery()};document.head.appendChild(s)}}
+//THEMES WEB[START]
+const sth=e=>{const[t,c]=e.dataset.tema.split('|');document.documentElement.dataset.theme=t,(document.querySelector('meta[name="theme-color"]')||Object.assign(document.head.appendChild(document.createElement('meta')),{name:'theme-color'})).content=c,localStorage.mtheme=e.dataset.tema,document.querySelector('.mtha')?.classList.remove('mtha'),e.classList.add('mtha')};sth(document.querySelector(`[data-tema="${localStorage.mtheme}"]`)||document.querySelector('.mtha'));document.querySelectorAll('[data-tema]').forEach(e=>e.onclick=()=>sth(e));
+</script>
+
+</body>
+</html>
